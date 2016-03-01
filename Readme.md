@@ -1,7 +1,7 @@
 # Личный проект «Седона» [![Build status][travis-image]][travis-url] [![Dependency status][dependency-image]][dependency-url]
 
 * Студент: [Rustam Yusupov](https://up.htmlacademy.ru/adaptive/6/user/151188).
-* Наставник: `Неизвестно`.
+* Наставник: `Sergey Popov`.
 
 ---
 
