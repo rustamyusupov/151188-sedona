@@ -1,3 +1,5 @@
 .wrapper {
   @include outlined;
+  margin: 0 auto;
+  width: $small-screen;
 }
