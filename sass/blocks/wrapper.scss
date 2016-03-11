@@ -1,5 +1,6 @@
 .wrapper {
-  @include outlined;
   margin: 0 auto;
-  width: $small-screen;
+  width: map-get($breakpoints, small);
+
+  @include outlined;
 }

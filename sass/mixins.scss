@@ -1,16 +1,30 @@
 @mixin clearfix {
   &::after {
+    clear: both;
     content: '';
     display: table;
-    clear: both;
   }
-}
-
-@mixin size($width, $height: $width) {
-  width: $width;
-  height: $height;
 }
 
 @mixin outlined($color: red) {
   outline: 1px dashed $color;
+}
+
+// @mixin respond-to($breakpoint) {
+//   @if map-has-key($breakpoints, $breakpoint) {
+//     @media (min-width: #{map-get($breakpoints, $breakpoint)}) {
+//       @content;
+//     }
+//   }
+// }
+//
+// @mixin screen-width($breakpoint) {
+//   @if map-has-key($breakpoints, $breakpoint) {
+//     max-width: #{map-get($breakpoints, $breakpoint)};
+//   }
+// }
+
+@mixin size($width, $height: $width) {
+  height: $height;
+  width: $width;
 }
