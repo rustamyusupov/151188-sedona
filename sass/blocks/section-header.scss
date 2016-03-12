@@ -1,3 +1,17 @@
 .section-header {
+  @include container;
+  
   @include outlined;
+}
+
+@media #{$break-medium} {
+
+  .section-header {
+    width: 458px;
+  }
+
+}
+
+@media #{$break-large} {
+
 }

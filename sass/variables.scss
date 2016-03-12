@@ -1,17 +1,16 @@
-$body-bg: ;
+$break-small: "(max-width: 767px)";
+$break-medium: "(min-width: 768px)";
+$break-large: "(min-width: 1200px)";
 
-$breakpoints: (
-  small: 320px,
-  medium: 768px,
-  large: 1200px
-);
+$color-base: #000000;
 
-$font-family: "PT Sans", "Tahoma", sans-serif;
-$font-size-base: 18px;
+$font-family-base: "PT Sans", "Tahoma", sans-serif;
+$font-size-base: 14px;
 $font-size-large: ;
 $font-size-small: ;
 $font-size-h1: ;
 $font-size-h2: ;
 $font-size-h3: ;
+$font-weight-base: normal;
 
 $line-height-base: 26px;

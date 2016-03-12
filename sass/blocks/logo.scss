@@ -1,3 +1,33 @@
 .logo {
+  left: 50%;
+  margin-left: -51px;
+  position: absolute;
+
+  &__image {
+    height: 83px;
+    width: 102px;
+  }
+
   @include outlined;
+}
+
+@media #{$break-medium} {
+
+  .logo {
+    top: 0;
+  }
+
+}
+
+@media #{$break-large} {
+
+  .logo {
+
+    &__image {
+      height: 96px;
+      width: 187px;
+    }
+
+  }
+
 }

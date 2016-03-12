@@ -1,3 +1,13 @@
 .social {
   @include outlined;
 }
+
+@media #{$break-medium} {
+
+  .social {
+    display: inline-block;
+    font-size: $font-size-base;
+    vertical-align: middle;
+  }
+  
+}

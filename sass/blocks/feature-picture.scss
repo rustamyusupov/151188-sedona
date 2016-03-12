@@ -1,3 +1,33 @@
 .feature-picture {
   @include outlined;
+
+  &__image {
+    height: 260px;
+    width: 320px;
+  }
+}
+
+@media #{$break-medium} {
+
+  .feature-picture {
+
+    &__image {
+      height: 256px;
+      width: 512px;
+    }
+
+  }
+
+}
+
+@media #{$break-large} {
+
+  .feature-picture {
+
+    &__image {
+      width: 800px;
+    }
+
+  }
+
 }

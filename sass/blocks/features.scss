@@ -1,3 +1,42 @@
 .features {
+  text-align: center;
+
+  &__header {
+    @include container;
+    margin: 0 auto;
+    min-height: 220px;
+
+    @include outlined;
+  }
+
+  &__title {
+    margin: 0;
+  }
+
+  &__text {
+    margin: 0;
+  }
+
   @include outlined;
+}
+
+@media #{$break-medium} {
+
+  .features {
+
+    &__header {
+      min-height: 205px;
+      width: 550px;
+    }
+
+    &__row {
+      @include clearfix;
+    }
+
+  }
+
+}
+
+@media #{$break-large} {
+
 }

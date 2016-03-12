@@ -1,6 +1,6 @@
 .wrapper {
-  margin: 0 auto;
-  width: map-get($breakpoints, small);
+  @include container;
+  width: 320px;
 
   @include outlined;
 }

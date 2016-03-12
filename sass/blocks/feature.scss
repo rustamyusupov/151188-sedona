@@ -1,3 +1,30 @@
 .feature {
+  @include container;
+  margin: 0 auto;
+  min-height: 170px;
+
+  &__text {
+    margin: 0;
+  }
+
   @include outlined;
+}
+
+@media #{$break-medium} {
+
+  .feature {
+    float: left;
+    min-height: 256px;
+    width: 256px;
+  }
+
+}
+
+@media #{$break-large} {
+
+  .feature {
+    float: left;
+    width: 400px;
+  }
+
 }
