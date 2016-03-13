@@ -6,12 +6,25 @@
   }
 }
 
+@mixin breakpoints {
+  margin: 0 auto;
+  width: 320px;
+
+  @media #{$break-medium} {
+    width: 768px;
+  }
+
+  @media #{$break-large} {
+    width: 1200px;
+  }
+}
+
 @mixin container {
   margin: 0 auto;
   width: 280px;
 
   @media #{$break-medium} {
-    width: 768px;
+    width: 648px;
   }
 
   @media #{$break-large} {

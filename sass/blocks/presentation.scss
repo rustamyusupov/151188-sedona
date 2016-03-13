@@ -42,9 +42,10 @@
 @media #{$break-medium} {
 
   .presentation {
-    margin: 0 auto;
+    @include container;
+    /* margin: 0 auto; */
     min-height: 745px;
-    width: 648px;
+    /* width: 648px; */
 
     &__video {
       height: 500px;
