@@ -1,6 +1,7 @@
 .section-header {
   @include container;
-  
+  text-align: center;
+
   @include outlined;
 }
 
