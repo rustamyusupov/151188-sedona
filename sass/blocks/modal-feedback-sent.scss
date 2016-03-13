@@ -1,3 +1,45 @@
 .modal-feedback-sent {
+  // TODO: Временно, убрать
+  background-color: lightgrey;
+  display: none;
+  min-height: 320px;
+  text-align: center;
+  position: absolute;
+  width: 320px;
+
+  &__header {
+    margin: 0 auto;
+    width: 220px;
+  }
+
+  &__text {
+    margin: 0 auto;
+    width: 220px;
+  }
+
+  &--show {
+    display: block;
+  }
+
   @include outlined;
+}
+
+@media #{$break-medium} {
+
+  .modal-feedback-sent {
+    left: 50%;
+    margin-left: -320px;
+    min-height: 345px;
+    width: 640px;
+
+    &__header {
+      width: 420px;
+    }
+
+    &__text {
+      width: 420px;
+    }
+
+  }
+
 }

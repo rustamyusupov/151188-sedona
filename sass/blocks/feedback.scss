@@ -1,3 +1,84 @@
 .feedback {
+  /* position: relative; */
+
+  fieldset {
+    border: none;
+    margin: 0;
+    padding: 0;
+  }
+
+  &__introduce {
+    min-height: 305px;
+  }
+
+  &__contacts {
+    min-height: 315px;
+  }
+
+  &__impression {
+    min-height: 290px;
+  }
+
+  &__places {
+    min-height: 405px;
+  }
+
+  &__emotions {
+    min-height: 270px;
+  }
+
   @include outlined;
+}
+
+@media #{$break-medium} {
+
+  .feedback {
+    font-size: 0;
+
+    fieldset {
+      display: inline-block;
+      font-size: $font-size-base;
+      min-height: 300px;
+      vertical-align: top;
+    }
+
+    // TODO: Временно, удалить
+    button {
+      font-size: $font-size-base;
+    }
+
+    &__introduce,
+    &__contacts {
+      min-height: 360px;
+      width: 324px;
+    }
+
+    &__impression,
+    &__places,
+    &__emotions {
+      width: 648px;
+    }
+
+  }
+
+}
+
+@media #{$break-large} {
+
+  .feedback {
+
+    &__introduce,
+    &__contacts {
+      min-height: 360px;
+      width: 480px;
+    }
+
+    &__impression,
+    &__places,
+    &__emotions {
+      width: 960px;
+    }
+
+  }
+
 }
