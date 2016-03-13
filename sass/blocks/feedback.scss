@@ -1,7 +1,6 @@
 .feedback {
-  /* position: relative; */
 
-  fieldset {
+  &__item {
     border: none;
     margin: 0;
     padding: 0;
@@ -35,7 +34,7 @@
   .feedback {
     font-size: 0;
 
-    fieldset {
+    &__item {
       display: inline-block;
       font-size: $font-size-base;
       min-height: 300px;

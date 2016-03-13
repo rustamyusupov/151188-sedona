@@ -8,24 +8,16 @@
 
 @media #{$break-medium} {
 
-  .feature-picture {
-
-    &__image {
-      @include size(512px, 256px);
-    }
-
+  .feature-picture__image {
+    @include size(512px, 256px);
   }
 
 }
 
 @media #{$break-large} {
 
-  .feature-picture {
-
-    &__image {
-      width: 800px;
-    }
-
+  .feature-picture__image {
+    width: 800px;
   }
 
 }

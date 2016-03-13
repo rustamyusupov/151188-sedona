@@ -3,7 +3,6 @@
 
   &__header {
     @include container;
-    min-height: 220px;
 
     @include outlined;
   }
@@ -24,7 +23,6 @@
   .features {
 
     &__header {
-      min-height: 205px;
       width: 550px;
     }
 
@@ -33,9 +31,5 @@
     }
 
   }
-
-}
-
-@media #{$break-large} {
 
 }

@@ -28,35 +28,19 @@
       display: inline-block;
       font-size: 14px;
       vertical-align: top;
+      width: 20%;
     }
 
     &__item:nth-child(2) {
-      margin-right: 156px;
+      margin-right: 20%;
     }
 
     &__link {
       display: block;
       padding: 15px 0;
       text-align: center;
-      // TODO: Мне кажется это лучше, чем отступы подбирать
-      width: 153px;
-    }
-  }
-
-}
-
-@media #{$break-large} {
-
-  .menu {
-
-    &__item:nth-child(2) {
-      margin-right: 244px;
     }
 
-    &__link {
-      // TODO: Мне кажется это лучше, чем отступы подбирать
-      width: 239px;
-    }
   }
 
 }

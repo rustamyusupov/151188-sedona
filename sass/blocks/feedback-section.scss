@@ -19,26 +19,18 @@
 
 @media #{$break-medium} {
 
-  .feedback-section {
-
-    &__header {
-      margin: 0 auto;
-      min-height: 250px;
-      width: 450px;
-    }
-
+  .feedback-section__header {
+    margin: 0 auto;
+    min-height: 250px;
+    width: 450px;
   }
 
 }
 
 @media #{$break-large} {
 
-  .feedback-section {
-
-    &__header {
-      min-height: 270px;
-    }
-
+  .feedback-section__header {
+    min-height: 270px;
   }
 
 }

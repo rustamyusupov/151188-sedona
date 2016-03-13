@@ -1,7 +1,7 @@
 .logo {
   left: 50%;
-  margin-left: -51px;
   position: absolute;
+  transform: translateX(-50%);
 
   &__image {
     @include size(102px, 83px);
@@ -20,13 +20,8 @@
 
 @media #{$break-large} {
 
-  .logo {
-    margin-left: -94px;
-
-    &__image {
+  .logo__image {
       @include size(187px, 96px);
-    }
-
   }
 
 }

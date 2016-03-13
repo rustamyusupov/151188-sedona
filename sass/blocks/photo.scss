@@ -24,15 +24,14 @@
       @include size(324px, 267px);
     }
 
+    &__picture--big-size {
+      @include size(648px, 400px);
+    }
+
     &__description {
       min-height: 80px;
       position: relative;
       width: 100%;
-    }
-
-    // TODO: Не соображу, почему все картинки?
-    &__picture:first-child {
-      /* width: 648px; */
     }
 
     &__likes {
@@ -41,11 +40,11 @@
       bottom: 30px;
     }
 
-  }
+    &:first-child {
+      min-height: 400px;
+      width: 100%;
+    }
 
-  .photo:first-child {
-    min-height: 480px;
-    width: 100%;
   }
 
 }
@@ -63,9 +62,8 @@
       width: 400px;
     }
 
-    // TODO: Не соображу, почему все картинки?
-    &__picture:first-child {
-      /* width: 648px; */
+    &__picture--big-size {
+      width: 100%;
     }
 
     &__description {
@@ -74,11 +72,11 @@
       width: 100%;
     }
 
-  }
+    &:first-child {
+      min-height: 400px;
+      width: 100%;
+    }
 
-  .photo:first-child {
-    min-height: 400px;
-    width: 100%;
   }
 
 }
