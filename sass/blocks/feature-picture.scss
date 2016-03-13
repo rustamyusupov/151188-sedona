@@ -2,8 +2,7 @@
   @include outlined;
 
   &__image {
-    height: 260px;
-    width: 320px;
+    @include size(320px, 260px);
   }
 }
 
@@ -12,8 +11,7 @@
   .feature-picture {
 
     &__image {
-      height: 256px;
-      width: 512px;
+      @include size(512px, 256px);
     }
 
   }

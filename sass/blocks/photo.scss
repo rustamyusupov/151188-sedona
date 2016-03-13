@@ -2,8 +2,7 @@
   min-height: 280px;
 
   &__picture {
-    height: 280px;
-    width: 280px;
+    @include size(280px);
   }
 
   &__description {
@@ -22,8 +21,7 @@
     vertical-align: top;
 
     &__picture {
-      height: 267px;
-      width: 324px;
+      @include size(324px, 267px);
     }
 
     &__description {
@@ -62,7 +60,6 @@
     vertical-align: top;
 
     &__picture {
-      height: 267px;
       width: 400px;
     }
 

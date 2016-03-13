@@ -1,8 +1,7 @@
 .welcome {
 
   &__image {
-    height: 389px;
-    width: 320px;
+    @include size(320px, 389px);
   }
 
   @include outlined;
@@ -13,8 +12,7 @@
   .welcome {
 
     &__image {
-      height: 518px;
-      width: 768px;
+      @include size(768px, 518px);
     }
 
   }

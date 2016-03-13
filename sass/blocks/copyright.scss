@@ -11,9 +11,8 @@
 
   &__image {
     display: inline-block;
-    height: 34px;
     vertical-align: middle;
-    width: 27px;
+    @include size(27px, 34px);
   }
 
   @include outlined;

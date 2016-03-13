@@ -4,8 +4,7 @@
   position: absolute;
 
   &__image {
-    height: 83px;
-    width: 102px;
+    @include size(102px, 83px);
   }
 
   @include outlined;
@@ -25,8 +24,7 @@
     margin-left: -94px;
 
     &__image {
-      height: 96px;
-      width: 187px;
+      @include size(187px, 96px);
     }
 
   }
