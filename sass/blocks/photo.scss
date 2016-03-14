@@ -1,3 +1,82 @@
 .photo {
+  min-height: 280px;
+
+  &__picture {
+    @include size(280px);
+  }
+
+  &__description {
+    min-height: 110px;
+  }
+
   @include outlined;
+}
+
+@media #{$break-medium} {
+
+  .photo {
+    display: inline-block;
+    font-size: $font-size-base;
+    min-height: 267px;
+    vertical-align: top;
+
+    &__picture {
+      @include size(324px, 267px);
+    }
+
+    &__picture--big-size {
+      @include size(648px, 400px);
+    }
+
+    &__description {
+      min-height: 80px;
+      position: relative;
+      width: 100%;
+    }
+
+    &__likes {
+      position: absolute;
+      right: 20px;
+      bottom: 30px;
+    }
+
+    &:first-child {
+      min-height: 400px;
+      width: 100%;
+    }
+
+  }
+
+}
+
+@media #{$break-large} {
+
+  .photo {
+    display: inline-block;
+    font-size: $font-size-base;
+    min-height: 267px;
+    position: relative;
+    vertical-align: top;
+
+    &__picture {
+      width: 400px;
+    }
+
+    &__picture--big-size {
+      width: 100%;
+    }
+
+    &__description {
+      position: absolute;
+      bottom: 0;
+      width: 100%;
+    }
+
+    &:first-child {
+      min-height: 400px;
+      width: 100%;
+    }
+
+  }
+
 }

@@ -1,3 +1,29 @@
 .copyright {
+  font-size: 0;
+  text-align: center;
+
+  &__title {
+    display: inline-block;
+    font-size: $font-size-base;
+    margin: 0;
+    vertical-align: middle;
+  }
+
+  &__image {
+    display: inline-block;
+    vertical-align: middle;
+    @include size(27px, 34px);
+  }
+
   @include outlined;
+}
+
+@media #{$break-medium} {
+
+  .copyright {
+    display: inline-block;
+    font-size: $font-size-base;
+    vertical-align: middle;
+  }
+
 }

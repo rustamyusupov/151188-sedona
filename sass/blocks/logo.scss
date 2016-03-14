@@ -1,3 +1,27 @@
 .logo {
+  left: 50%;
+  position: absolute;
+  transform: translateX(-50%);
+
+  &__image {
+    @include size(102px, 83px);
+  }
+
   @include outlined;
+}
+
+@media #{$break-medium} {
+
+  .logo {
+    top: 0;
+  }
+
+}
+
+@media #{$break-large} {
+
+  .logo__image {
+      @include size(187px, 96px);
+  }
+
 }

@@ -1,3 +1,15 @@
 .section-header {
+  // TODO: Весь этот блок не нравится, не лучше ли каждый хедер элементом блока делать
+  @include container;
+  text-align: center;
+
   @include outlined;
+}
+
+@media #{$break-medium} {
+
+  .section-header {
+    width: 458px;
+  }
+
 }

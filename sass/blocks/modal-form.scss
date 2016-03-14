@@ -1,0 +1,51 @@
+.modal-form {
+  // TODO: Временно, убрать
+  background-color: lightgrey;
+  display: none;
+  min-height: 320px;
+  text-align: center;
+  position: absolute;
+  width: 320px;
+
+  &__text {
+    margin: 0 auto;
+    width: 220px;
+  }
+
+  &--show {
+    display: block;
+  }
+
+  @include outlined;
+}
+
+@media #{$break-medium} {
+
+  .modal-form {
+    left: 50%;
+    min-height: 345px;
+    transform: translateX(-50%);
+
+    &--something-wrong {
+      width: 400px;
+    }
+
+    &--feedback-sent {
+      width: 640px;
+    }
+
+    &__text {
+
+      &--something-wrong {
+        width: 300px;
+      }
+
+      &--feedback-sent {
+        width: 420px;
+      }
+
+    }
+
+  }
+
+}

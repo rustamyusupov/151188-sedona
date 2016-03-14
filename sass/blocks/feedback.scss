@@ -1,3 +1,67 @@
 .feedback {
+
+  &__item {
+    border: none;
+    margin: 0;
+    padding: 0;
+
+    // TODO: Временно, удалить
+    min-height: 300px;
+
+    @include outlined;
+  }
+
   @include outlined;
+}
+
+@media #{$break-medium} {
+
+  .feedback {
+    font-size: 0;
+
+    &__item {
+      display: inline-block;
+      font-size: $font-size-base;
+      min-height: 300px;
+      vertical-align: top;
+
+      &--column {
+        min-height: 360px;
+        width: 324px;
+      }
+
+      &--full-line {
+        width: 648px;
+      }
+
+    }
+
+    // TODO: Временно, удалить
+    button {
+      font-size: $font-size-base;
+    }
+
+  }
+
+}
+
+@media #{$break-large} {
+
+  .feedback {
+
+    &__item {
+
+      &--column {
+        min-height: 360px;
+        width: 480px;
+      }
+
+      &--full-line {
+        width: 960px;
+      }
+
+    }
+
+  }
+
 }

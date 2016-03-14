@@ -1,3 +1,35 @@
 .features {
+  text-align: center;
+
+  &__header {
+    @include container;
+
+    @include outlined;
+  }
+
+  &__title {
+    margin: 0;
+  }
+
+  &__text {
+    margin: 0;
+  }
+
   @include outlined;
+}
+
+@media #{$break-medium} {
+
+  .features {
+
+    &__header {
+      width: 550px;
+    }
+
+    &__row {
+      @include clearfix;
+    }
+
+  }
+
 }

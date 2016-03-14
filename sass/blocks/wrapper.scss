@@ -1,5 +1,14 @@
 .wrapper {
-  @include outlined;
   margin: 0 auto;
-  width: $small-screen;
+  width: 320px;
+
+  @media #{$break-medium} {
+    width: 768px;
+  }
+
+  @media #{$break-large} {
+    width: 1200px;
+  }
+
+  @include outlined;
 }

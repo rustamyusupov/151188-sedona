@@ -1,3 +1,50 @@
 .photos {
+  @include container;
+
+  &__header {
+    text-align: center;
+    min-height: 190px;
+  }
+
+  &__title {
+    margin: 0;
+  }
+
+  &__text {
+    margin: 0;
+  }
+
   @include outlined;
+}
+
+@media #{$break-medium} {
+
+  .photos {
+
+    &__header {
+      min-height: 248px;
+    }
+
+    &__text {
+      margin: 0 auto;
+      width: 430px;
+    }
+
+    &__row {
+      font-size: 0;
+    }
+
+  }
+}
+
+@media #{$break-large} {
+
+  .photos {
+    width: 1200px;
+
+    &__header {
+      min-height: 287px;
+    }
+
+  }
 }

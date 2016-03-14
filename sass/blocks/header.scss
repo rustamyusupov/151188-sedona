@@ -1,3 +1,22 @@
 .header {
+  min-height: 279px;
+  position: relative;
+
+  &__menu-toggle {
+    float: right;
+  }
+
   @include outlined(green);
+}
+
+@media #{$break-medium} {
+
+  .header {
+    min-height: 56px;
+
+    &__menu-toggle {
+      display: none;
+    }
+  }
+
 }

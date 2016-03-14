@@ -2,6 +2,7 @@
 <html lang="ru">
 <head>
   <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
   <title>Седона: форма отзыва</title>
   <link href="css/style.css" rel="stylesheet">
 </head>
@@ -27,12 +28,12 @@
       <img class="welcome__image" src="http://placehold.it/320x160" width="320" height="160" alt="Sedona">
     </div>
     <section class="feedback-section">
-      <div class="section-header">
+      <header class="feedback-section__header">
         <h1 class="feedback-section__title">Оставьте свой отзыв</h1>
         <p class="feedback-section__text">Помогите нашим отелям стать лучше! оставьте отзыв о них, а также о посещенных вами достопримечательностях.</p>
-      </div>
+      </header>
       <form class="feedback" action="#" method="post">
-        <fieldset class="feedback__introduce">
+        <fieldset class="feedback__item feedback__item--column">
           <legend class="feedback__header">Представьтесь, пожалуйста:</legend>
           <div class="feedback__introduce-name">
             <label for="name-field">Имя:</label>
@@ -47,18 +48,7 @@
             <input type="text" name="patronymic" id="patronymic-field" placeholder="Александрович">
           </div>
         </fieldset>
-        <fieldset class="feedback__contacts">
-          <legend class="feedback__header">Контактная информация:</legend>
-          <div class="feedback__contacts-phone feedback__contacts--icon feedback__contacts--phone">
-            <label for="phone-field">Контактный телефон:</label>
-            <input type="tel" name="name" id="phone-field" placeholder="Введите телефон" required>
-          </div>
-          <div class="feedback__contacts-email feedback__contacts--icon feedback__contacts--email">
-            <label for="email-field">Электронная почта:</label>
-            <input type="email" name="name" id="phone-field" placeholder="Введите e-mail" required>
-          </div>
-        </fieldset>
-        <fieldset class="feedback__impression">
+        <fieldset class="feedback__item feedback__item--column">
           <legend class="feedback__header">Ваше общее впечатление:</legend>
           <ul class="feedback__impression-list">
             <li class="feedback__impression-item">
@@ -75,7 +65,18 @@
             </li>
           </ul>
         </fieldset>
-        <fieldset class="feedback__places">
+        <fieldset class="feedback__item feedback__item--full-line">
+          <legend class="feedback__header">Контактная информация:</legend>
+          <div class="feedback__contacts-phone feedback__contacts--icon feedback__contacts--phone">
+            <label for="phone-field">Контактный телефон:</label>
+            <input type="tel" name="name" id="phone-field" placeholder="Введите телефон" required>
+          </div>
+          <div class="feedback__contacts-email feedback__contacts--icon feedback__contacts--email">
+            <label for="email-field">Электронная почта:</label>
+            <input type="email" name="name" id="phone-field" placeholder="Введите e-mail" required>
+          </div>
+        </fieldset>
+        <fieldset class="feedback__item feedback__item--full-line">
           <legend class="feedback__header">Посещенные достопримечательности:</legend>
           <ul class="feedback__places-list">
             <li class="feedback__places-item">
@@ -96,22 +97,22 @@
             </li>
           </ul>
         </fieldset>
-        <fieldset class="feedback__emotions">
+        <fieldset class="feedback__item feedback__item--full-line">
           <legend class="feedback__header">Опишите свои эмоции:</legend>
           <textarea id="text-field" name="text" placeholder="Опишите подробно все свои восторги"></textarea>
         </fieldset>
         <button class="btn btn--submit" type="submit">Отправить отзыв</button>
       </form>
     </section>
-    <div class="modal-something-wrong">
-      <b class="modal-something-wrong__header">Что-то пошло не так!</b>
-      <p class="modal-something-wrong__text">Проверьте поля, выделенные красным, скорее всего вы забыли их заполнить</p>
-      <button class="btn btn-something-wrong-ok">OK</button>
+    <div class="modal-form modal-form--something-wrong">
+      <b class="modal-form__header">Что-то пошло не так!</b>
+      <p class="modal-form__text modal-form__text--something-wrong">Проверьте поля, выделенные красным, скорее всего вы забыли их заполнить</p>
+      <button class="btn btn-modal-form btn-modal-form--something-wrong">OK</button>
     </div>
-    <div class="modal-feedback-sent">
-      <b class="modal-feedback-sent__header">Ваш отзыв отправлен!</b>
-      <p class="modal-feedback-sent__text">Спасибо за ваше участие, ваш отзыв уже поступил к нам. В ближайшее время мы опубликуем его на сайте.</p>
-      <button class="btn btn-feedback-sent-close">Закрыть окно</button>
+    <div class="modal-form modal-form--feedback-sent">
+      <b class="modal-form__header">Ваш отзыв отправлен!</b>
+      <p class="modal-form__text modal-form__text--feedback-sent">Спасибо за ваше участие, ваш отзыв уже поступил к нам. В ближайшее время мы опубликуем его на сайте.</p>
+      <button class="btn btn-modal-form btn-modal-form--feedback-sent">Закрыть окно</button>
     </div>
     <footer class="footer">
       <div class="footer__hashtag">#VisitSedona</div>

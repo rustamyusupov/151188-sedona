@@ -1,1 +1,10 @@
-$small-screen: 320px;
+$break-small: "(max-width: 767px)";
+$break-medium: "(min-width: 768px)";
+$break-large: "(min-width: 1200px)";
+
+$color-base: #000000;
+
+$font-family-base: "PT Sans", "Tahoma", sans-serif;
+$font-size-base: 14px;
+
+$line-height-base: 26px;

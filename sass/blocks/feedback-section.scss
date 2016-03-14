@@ -1,3 +1,36 @@
 .feedback-section {
+  @include container;
+
+  &__header {
+    min-height: 204px;
+    text-align: center;
+  }
+
+  &__title {
+    margin: 0;
+  }
+
+  &__text {
+    margin: 0;
+  }
+
   @include outlined;
+}
+
+@media #{$break-medium} {
+
+  .feedback-section__header {
+    margin: 0 auto;
+    min-height: 250px;
+    width: 450px;
+  }
+
+}
+
+@media #{$break-large} {
+
+  .feedback-section__header {
+    min-height: 270px;
+  }
+
 }

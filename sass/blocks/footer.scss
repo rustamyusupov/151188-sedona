@@ -1,3 +1,28 @@
 .footer {
+  min-height: 243px;
+  text-align: center;
+
   @include outlined(green);
+}
+
+@media #{$break-medium} {
+
+  .footer {
+    font-size: 0;
+    min-height: 120px;
+  }
+
+  .footer__hashtag,
+  .social,
+  .copyright {
+    display: inline-block;
+    font-size: $font-size-base;
+    vertical-align: middle;
+    // TODO: Примерно, потом для каждого подберу
+    padding: 40px 0;
+    width: 33.3%;
+
+    @include outlined(red);
+  }
+
 }
