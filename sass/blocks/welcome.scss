@@ -9,24 +9,16 @@
 
 @media #{$break-medium} {
 
-  .welcome {
-
-    &__image {
+  .welcome__image {
       @include size(768px, 518px);
-    }
-
   }
 
 }
 
 @media #{$break-large} {
 
-  .welcome {
-
-    &__image {
+  .welcome__image {
       width: 1200px;
-    }
-
   }
 
 }

@@ -4,26 +4,11 @@
     border: none;
     margin: 0;
     padding: 0;
-  }
 
-  &__introduce {
-    min-height: 305px;
-  }
+    // TODO: Временно, удалить
+    min-height: 300px;
 
-  &__contacts {
-    min-height: 315px;
-  }
-
-  &__impression {
-    min-height: 290px;
-  }
-
-  &__places {
-    min-height: 405px;
-  }
-
-  &__emotions {
-    min-height: 270px;
+    @include outlined;
   }
 
   @include outlined;
@@ -39,23 +24,21 @@
       font-size: $font-size-base;
       min-height: 300px;
       vertical-align: top;
+
+      &--column {
+        min-height: 360px;
+        width: 324px;
+      }
+
+      &--full-line {
+        width: 648px;
+      }
+
     }
 
     // TODO: Временно, удалить
     button {
       font-size: $font-size-base;
-    }
-
-    &__introduce,
-    &__contacts {
-      min-height: 360px;
-      width: 324px;
-    }
-
-    &__impression,
-    &__places,
-    &__emotions {
-      width: 648px;
     }
 
   }
@@ -66,16 +49,17 @@
 
   .feedback {
 
-    &__introduce,
-    &__contacts {
-      min-height: 360px;
-      width: 480px;
-    }
+    &__item {
 
-    &__impression,
-    &__places,
-    &__emotions {
-      width: 960px;
+      &--column {
+        min-height: 360px;
+        width: 480px;
+      }
+
+      &--full-line {
+        width: 960px;
+      }
+
     }
 
   }

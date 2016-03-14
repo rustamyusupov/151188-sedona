@@ -1,5 +1,5 @@
 .presentation {
-  min-height: 460px;
+  margin-bottom: 50px;
   position: relative;
 
   &__title {
@@ -43,9 +43,7 @@
 
   .presentation {
     @include container;
-    /* margin: 0 auto; */
-    min-height: 745px;
-    /* width: 648px; */
+    margin-bottom: 40px;
 
     &__video {
       height: 500px;
@@ -72,6 +70,7 @@
 @media #{$break-large} {
 
   .presentation {
+    margin-bottom: 80px;
     width: 800px;
   }
 
