@@ -1,18 +1,66 @@
 .header {
-  min-height: 279px;
-  position: relative;
 
   &__menu-toggle {
-    float: right;
+    background-color: unset;
+    border: none;
+    cursor: pointer;
+    display: block;
+    font-size: 0;
+    height: 20px;
+    position: absolute;
+    right: 21px;
+    top: 16px;
+    width: 23px;
+    z-index: 2;
+
+    &--closed::before {
+      background-color: #81b3d2;
+      // TODO: Сверху и снизу у второй тени на макете есть белые полосы, необходимо ли их делать?
+      box-shadow: 0 8px 0 0 #81b3d2,
+                  0 16px 0 0 #81b3d2;
+      content: "";
+      height: 4px;
+      position: absolute;
+      right: 0;
+      top: 0;
+      width: 23px;
+    }
+
+    &--opened::before,
+    &--opened::after {
+      background-color: #ffffff;
+      content: "";
+      height: 4px;
+      position: absolute;
+      width: 28px;
+      right: -3px;
+      top: 9px;
+    }
+
+    &--opened::before {
+      transform: rotate(45deg);
+    }
+
+    &--opened::after {
+      transform: rotate(-45deg);
+    }
+
   }
 
-  @include outlined(green);
+}
+
+@media #{$break-small } {
+
+  .header {
+    padding-bottom: 56px;
+    position: relative;
+  }
+
 }
 
 @media #{$break-medium} {
 
   .header {
-    min-height: 56px;
 
     &__menu-toggle {
       display: none;
