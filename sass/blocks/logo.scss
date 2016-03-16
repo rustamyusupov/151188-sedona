@@ -2,6 +2,7 @@
   left: 50%;
   position: absolute;
   transform: translateX(-50%);
+  z-index: 1;
 
   &__image {
     @include size(102px, 83px);

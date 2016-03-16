@@ -4,18 +4,50 @@
   &__header {
     @include container;
 
-    @include outlined;
+    margin-bottom: 25px;
+    position: relative;
+
+  &::after {
+    background-image:
+      linear-gradient(
+        to top right,
+        transparent 50%,
+        $color-white 50%
+      ),
+      linear-gradient(
+        to top left,
+        transparent 50%,
+        $color-white 50%
+      );
+    background-position: 0 0, 100% 0;
+    background-repeat: no-repeat;
+    background-size: 50.1% 100%;
+    bottom: -42px;
+    content: "";
+    height: 17px;
+    left: -20px;
+    position: absolute;
+    width: 320px;
+    z-index: 1;
+  }
+
   }
 
   &__title {
+    font-size: $font-size-medium;
+    font-weight: bold;
     margin: 0;
+    margin-bottom: 27px;
   }
 
   &__text {
     margin: 0;
   }
 
-  @include outlined;
+  &__row {
+    background-color: $bg-color-base;
+  }
+
 }
 
 @media #{$break-medium} {

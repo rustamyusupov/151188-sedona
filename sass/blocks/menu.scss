@@ -8,7 +8,6 @@
   }
 
   &__item {
-    font-family: $font-family-base;
     font-size: $font-size-medium;
     font-weight: bold;
     line-height: $line-height-medium;
@@ -28,7 +27,6 @@
     display: block;
     padding: 7px 0;
     text-decoration: none;
-    text-transform: uppercase;
 
     &--active {
       cursor: default;
