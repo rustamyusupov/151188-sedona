@@ -35,16 +35,63 @@
 
 @media #{$break-medium} {
 
-  .welcome__image {
+  .welcome {
+    margin-bottom: 50px;
+
+    &__image {
       @include size(768px, 518px);
+    }
+
+    &::before {
+      background-image:
+        linear-gradient(
+          to top right,
+          $color-white 50%,
+          transparent 50%
+        ),
+        linear-gradient(
+          to top left,
+          $color-white 50%,
+          transparent 50%
+        );
+      background-position: 0 0, 100% 0;
+      background-repeat: no-repeat;
+      background-size: 50.1% 100%;
+      bottom: 0;
+      content: "";
+      height: 58px;
+      left: 50%;
+      position: absolute;
+      transform: translateX(-50%);
+      width: 91%;
+      z-index: 1;
+    }
+
+    &::after {
+      height: 38px;
+    }
+
   }
 
 }
 
 @media #{$break-large} {
 
-  .welcome__image {
-      width: 1200px;
+  .welcome {
+
+    &__image {
+        width: 1200px;
+    }
+
+    &::before {
+      height: 58px;
+      width: 58%;
+    }
+
+    &::after {
+      height: 57px;
+    }
+
   }
 
 }

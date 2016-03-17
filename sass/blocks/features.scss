@@ -5,32 +5,6 @@
     @include container;
 
     margin-bottom: 25px;
-    position: relative;
-
-  &::after {
-    background-image:
-      linear-gradient(
-        to top right,
-        transparent 50%,
-        $color-white 50%
-      ),
-      linear-gradient(
-        to top left,
-        transparent 50%,
-        $color-white 50%
-      );
-    background-position: 0 0, 100% 0;
-    background-repeat: no-repeat;
-    background-size: 50.1% 100%;
-    bottom: -42px;
-    content: "";
-    height: 17px;
-    left: -20px;
-    position: absolute;
-    width: 320px;
-    z-index: 1;
-  }
-
   }
 
   &__title {
@@ -45,7 +19,52 @@
   }
 
   &__row {
-    background-color: $bg-color-base;
+    display: flex;
+    flex-direction: column;
+
+    &:first-of-type  {
+      position: relative;
+
+      .feature {
+        padding-top: 58px;
+      }
+
+      &::after {
+        background-image:
+          linear-gradient(
+            to top right,
+            transparent 50%,
+            $color-white 50%
+          ),
+          linear-gradient(
+            to top left,
+            transparent 50%,
+            $color-white 50%
+          );
+        background-position: 0 0, 100% 0;
+        background-repeat: no-repeat;
+        background-size: 50.1% 100%;
+        top: 0;
+        content: "";
+        height: 17px;
+        left: 0;
+        position: absolute;
+        width: 320px;
+        z-index: 1;
+      }
+
+    }
+
+    &:nth-of-type(2)  {
+      margin-top: 35px;
+      margin-bottom: 9px;
+    }
+
+    &:nth-of-type(4)  {
+      // TODO: Подумать над фоновым цветом!
+      background-color: $bg-color-grey;
+    }
+
   }
 
 }
@@ -55,13 +74,47 @@
   .features {
 
     &__header {
+      padding-bottom: 26px;
       width: 550px;
     }
 
-    &__row {
-      @include clearfix;
+    &__title {
+      font-size: $font-size-large;
     }
 
+    &__text {
+      margin: 0;
+    }
+
+    &__row {
+      flex-direction: row;
+
+      &:first-of-type  {
+
+        .feature {
+          padding-top: 45px;
+        }
+
+        &::after {
+          content: none;
+        }
+
+      }
+
+      &:nth-of-type(3) .feature-picture {
+        order: -1;
+      }
+
+    }
+
+  }
+
+}
+
+@media #{$break-large} {
+
+  .features__row:first-of-type .feature {
+    padding-top: 53px;
   }
 
 }

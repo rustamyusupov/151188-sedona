@@ -1,9 +1,10 @@
 .feature-picture {
-  @include outlined;
+  background-color: $color-white;
 
   &__image {
     @include size(320px, 260px);
   }
+
 }
 
 @media #{$break-medium} {

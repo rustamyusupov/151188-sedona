@@ -1,18 +1,39 @@
 .feature {
-  @include container;
-
+  background-color: $bg-color-base;
   color: $color-white;
-  min-height: 170px;
   padding-top: 40px;
+  padding-bottom: 25px;
 
   &__title {
+    display: block;
     font-size: $font-size-medium;
-    font-weight: bold;
-    line-height: $line-height-base;
+    margin-bottom: 8px;
   }
 
   &__text {
     margin: 0;
+    margin-bottom: 15px;
+    line-height: $line-height-small;
+    padding: 0 15px;
+  }
+
+  &--icon {
+    background-color: $color-white;
+    color: $color-base;
+    padding: 0;
+    padding-bottom: 27px;
+    padding-left: 70px;
+    text-align: left;
+  }
+
+  &--icon &__title {
+    margin-bottom: 15px;
+  }
+
+  &--icon &__text {
+    margin: 0;
+    padding: 0;
+    padding-right: 35px;
   }
 
 }
@@ -20,9 +41,42 @@
 @media #{$break-medium} {
 
   .feature {
-    float: left;
-    min-height: 256px;
+    padding-bottom: 23px;
+    padding-top: 45px;
     width: 256px;
+
+    &__title {
+      font-size: $font-size-large;
+      margin-bottom: 10px;
+      // TODO: Как сделать перенос для Моста Дьявола?
+      padding: 0 50px;
+    }
+
+    &__text {
+      margin-bottom: 21px;
+      padding: 0 40px;
+    }
+
+    &--icon {
+      margin-bottom: 52px;
+      padding: 0 49px;
+      padding-top: 124px;
+      text-align: center;
+    }
+
+    &--icon &__title {
+      margin-bottom: 21px;
+      padding: 0 30px;
+    }
+
+    &--icon &__text {
+      padding: 0;
+    }
+
+    &--icon-souvenirs {
+      order: 1;
+    }
+
   }
 
 }
@@ -30,7 +84,36 @@
 @media #{$break-large} {
 
   .feature {
+    padding-bottom: 36px;
+    padding-top: 52px;
     width: 400px;
+
+    &__title {
+      font-size: $font-size-large;
+      margin-bottom: 10px;
+      padding: 0 100px;
+    }
+
+    &__text {
+      margin-bottom: 21px;
+      padding: 0 55px;
+    }
+
+    &--icon {
+      margin-bottom: 37px;
+      //padding: 0 60px;
+      padding-top: 124px;
+      //text-align: center;
+    }
+
+    &--icon &__title {
+      //margin-bottom: 21px;
+    }
+
+    &--icon &__text {
+      padding: 0 24px;
+    }
+
   }
 
 }
