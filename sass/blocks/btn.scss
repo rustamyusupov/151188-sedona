@@ -1,0 +1,26 @@
+.btn {
+  background-color: $bg-color-base;
+  border: none;
+  color: $color-white;
+  cursor: pointer;
+  display: inline-block;
+  padding: 10px 10px;
+  text-decoration: none;
+  text-transform: uppercase;
+
+  &--search {
+    font-size: $font-size-large;
+    font-weight: bold;
+    padding: 16px 47px;
+  }
+
+}
+
+@media #{$break-medium} {
+
+  .btn--search {
+    padding: 16px 0;
+    width: 458px;
+  }
+
+}

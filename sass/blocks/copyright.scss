@@ -1,29 +1,39 @@
 .copyright {
-  font-size: 0;
+  align-items: center;
+  display: flex;
+  justify-content: center;
   text-align: center;
 
   &__title {
-    display: inline-block;
-    font-size: $font-size-base;
     margin: 0;
-    vertical-align: middle;
+    margin-right: 10px
   }
 
   &__image {
-    display: inline-block;
-    vertical-align: middle;
     @include size(27px, 34px);
   }
 
-  @include outlined;
 }
 
 @media #{$break-medium} {
 
   .copyright {
-    display: inline-block;
-    font-size: $font-size-base;
-    vertical-align: middle;
+    align-items: flex-start;
+    padding-top: 6px;
+
+    &__title {
+      padding-top: 3px;
+    }
+  }
+
+}
+
+@media #{$break-large} {
+
+  .copyright {
+    // TODO: Как правильно расположить? Пока методом подбора.
+    flex-basis: 400px;
+    justify-content: flex-end;
   }
 
 }
