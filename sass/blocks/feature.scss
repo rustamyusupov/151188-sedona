@@ -1,5 +1,4 @@
 .feature {
-  background-color: $bg-color-base;
   color: $color-white;
   padding-top: 40px;
   padding-bottom: 25px;
@@ -15,6 +14,37 @@
     margin-bottom: 15px;
     line-height: $line-height-small;
     padding: 0 15px;
+  }
+
+  &--bg-blue {
+    background-color: $bg-color-base;
+  }
+
+  &--bg-grey {
+    background-color: $bg-color-grey;
+    color: $color-base;
+    padding: 0 20px;
+    padding-bottom: 14px;
+    padding-top: 27px;
+    position: relative;
+
+    &::after {
+      content: "";
+      border-bottom: 1px solid #d6d6d6;
+      bottom: 1px;
+      left: 20px;
+      position: absolute;
+      width: 280px;
+    }
+
+    &:last-child {
+
+      &::after {
+        content: none;
+      }
+
+    }
+
   }
 
   &--icon {
@@ -48,13 +78,29 @@
     &__title {
       font-size: $font-size-large;
       margin-bottom: 10px;
-      // TODO: Как сделать перенос для Моста Дьявола?
+      // TODO: Как сделать перенос для Моста Дьявола (для заголовка и для текста)?
       padding: 0 50px;
     }
 
     &__text {
       margin-bottom: 21px;
       padding: 0 40px;
+    }
+
+    &--bg-grey {
+      padding: 0;
+      padding-bottom: 23px;
+      padding-top: 45px;
+
+      &::after {
+        content: none;
+      }
+
+    }
+
+    &--bg-grey &__text {
+      // TODO: Как сделать перенос слова Достопримеча-тельности?
+      padding: 0 38px; //50
     }
 
     &--icon {
@@ -99,15 +145,18 @@
       padding: 0 55px;
     }
 
-    &--icon {
-      margin-bottom: 37px;
-      //padding: 0 60px;
-      padding-top: 124px;
-      //text-align: center;
+    &--bg-grey {
+      padding: 45px 20px;
     }
 
-    &--icon &__title {
-      //margin-bottom: 21px;
+    &--bg-grey &__text {
+      // TODO: Как сделать перенос слова Достопримеча-тельности?
+      padding: 0 45px;
+    }
+
+    &--icon {
+      margin-bottom: 37px;
+      padding-top: 124px;
     }
 
     &--icon &__text {
