@@ -78,7 +78,6 @@
     &__title {
       font-size: $font-size-large;
       margin-bottom: 10px;
-      // TODO: Как сделать перенос для Моста Дьявола (для заголовка и для текста)?
       padding: 0 50px;
     }
 
@@ -100,7 +99,9 @@
 
     &--bg-grey &__text {
       // TODO: Как сделать перенос слова Достопримеча-тельности?
-      padding: 0 38px; //50
+      padding: 0 54px; //50
+
+      word-wrap: break-word;
     }
 
     &--icon {
@@ -137,7 +138,7 @@
     &__title {
       font-size: $font-size-large;
       margin-bottom: 10px;
-      padding: 0 100px;
+      padding: 0 120px;
     }
 
     &__text {
@@ -150,7 +151,6 @@
     }
 
     &--bg-grey &__text {
-      // TODO: Как сделать перенос слова Достопримеча-тельности?
       padding: 0 45px;
     }
 

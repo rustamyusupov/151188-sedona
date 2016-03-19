@@ -20,7 +20,8 @@
     margin: 0;
 
     &__hashtag {
-      padding-top: 9px;
+      margin-left: 5px;
+      margin-top: 9px;
     }
 
   }
@@ -30,11 +31,10 @@
 @media #{$break-large} {
 
   .footer {
+    justify-content: space-between;
 
     &__hashtag {
-      // TODO: Как правильно расположить? Пока методом подбора.
-      margin-left: 90px;
-      margin-right: 173px;
+      margin-left: 132px;
     }
 
   }
