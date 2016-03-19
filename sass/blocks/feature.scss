@@ -98,8 +98,7 @@
     }
 
     &--bg-grey &__text {
-      // TODO: Как сделать перенос слова Достопримеча-тельности?
-      padding: 0 54px; //50
+      padding: 0 54px;
 
       word-wrap: break-word;
     }
@@ -143,7 +142,7 @@
 
     &__text {
       margin-bottom: 21px;
-      padding: 0 55px;
+      padding: 0 85px;
     }
 
     &--bg-grey {
