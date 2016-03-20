@@ -15,7 +15,6 @@
 
     &--closed::before {
       background-color: #81b3d2;
-      // TODO: Сверху и снизу у второй тени на макете есть белые полосы, необходимо ли их делать?
       box-shadow: 0 8px 0 0 #81b3d2,
                   0 16px 0 0 #81b3d2;
       content: "";

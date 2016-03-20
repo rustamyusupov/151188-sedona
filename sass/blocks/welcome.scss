@@ -4,6 +4,11 @@
 
   &__image {
     @include size(320px, 389px);
+
+    &--photo-page {
+      height: 158px;
+    }
+
   }
 
   &::after {
@@ -40,6 +45,11 @@
 
     &__image {
       @include size(768px, 518px);
+
+      &--photo-page {
+        height: 290px;
+      }
+
     }
 
     &::before {
@@ -80,7 +90,12 @@
   .welcome {
 
     &__image {
-        width: 1200px;
+      width: 1200px;
+
+      &--photo-page {
+        height: 301px;
+      }
+
     }
 
     &::before {
