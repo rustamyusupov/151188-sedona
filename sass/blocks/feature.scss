@@ -53,7 +53,36 @@
     padding: 0;
     padding-bottom: 27px;
     padding-left: 70px;
+    position: relative;
     text-align: left;
+
+    &::before {
+      content: "";
+      background-color: $bg-color-base;
+      position: absolute;
+    }
+
+    &-home::before {
+      height: 36px;
+      left: 22px;
+      top: -9px;
+      width: 37px;
+    }
+
+    &-souvenirs::before {
+      height: 37px;
+      left: 25px;
+      top: -11px;
+      width: 32px;
+    }
+
+    &-food::before {
+      height: 34px;
+      left: 19px;
+      top: -4px;
+      width: 38px;
+    }
+
   }
 
   &--icon &__title {
@@ -109,8 +138,30 @@
       padding-top: 124px;
       text-align: center;
 
+      &-home::before {
+        height: 72px;
+        left: 90px;
+        top: 25px;
+        width: 75px;
+      }
+
+      &-food::before {
+        height: 68px;
+        left: 91px;
+        top: 28px;
+        width: 77px;
+      }
+
       &-souvenirs {
         order: 1;
+
+        &::before {
+          height: 75px;
+          left: 100px;
+          top: 22px;
+          width: 64px;
+        }
+
       }
 
     }
@@ -157,6 +208,21 @@
     &--icon {
       margin-bottom: 37px;
       padding-top: 124px;
+
+      &-home::before,
+      &-food::before {
+        left: 162px;
+      }
+
+      &-souvenirs {
+        order: 1;
+
+        &::before {
+          left: 168px;
+        }
+
+      }
+
     }
 
     &--icon &__text {
