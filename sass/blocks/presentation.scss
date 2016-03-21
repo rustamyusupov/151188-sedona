@@ -41,7 +41,7 @@
 
     // TODO: Как добавить серый блок снизу?
 /*     &::after {
-  background-color: #f2f2f2;
+  background-color: $bg-color-lightgrey;
   bottom: 0;
   content: "";
   left: 0;
@@ -109,7 +109,7 @@
     margin-bottom: 78px;
 
     &__title {
-      font-size: 30px;
+      font-size: $font-size-extra;
       margin-bottom: 30px;
     }
 

@@ -1,12 +1,12 @@
 .welcome {
-  margin-bottom: 40px;
+  margin-bottom: 38px;
   position: relative;
 
   &__image {
     @include size(320px, 389px);
 
-    &--photo-page {
-      height: 158px;
+    &--inner-page {
+      height: 159px;
     }
 
   }
@@ -46,7 +46,7 @@
     &__image {
       @include size(768px, 518px);
 
-      &--photo-page {
+      &--inner-page {
         height: 290px;
       }
 
@@ -92,8 +92,8 @@
     &__image {
       width: 1200px;
 
-      &--photo-page {
-        height: 301px;
+      &--inner-page {
+        height: 302px;
       }
 
     }

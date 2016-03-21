@@ -1,44 +1,321 @@
 .feedback {
+  @include container;
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 73px;
 
   &__item {
     border: none;
     margin: 0;
+    margin-bottom: 24px;
     padding: 0;
+    position: relative;
 
-    // TODO: Временно, удалить
-    min-height: 300px;
+    &::before {
+      content: "";
+      border-top: 1px solid $color-border;
+      left: -20px;
+      position: absolute;
+      top: -19px;
+      width: 320px
+    }
 
-    @include outlined;
+    &--introduce {
+      order: -2;
+    }
+
+    &--contacts {
+      margin-bottom: 28px;
+      order: -1;
+    }
+
+    &--impression {
+      margin-bottom: 19px;
+    }
+
+    &--places {
+      margin-bottom: 6px;
+    }
+
+    &--places .feedback__content-item {
+      margin-bottom: 54px;
+    }
+
+    &--emotions {
+      margin-bottom: 43px;
+    }
+
   }
 
-  @include outlined;
+  &__header {
+    font-size: $font-size-medium;
+    font-weight: bold;
+    margin-bottom: 21px;
+    text-align: center;
+  }
+
+  &__item--places &__header {
+    margin-bottom: 15px;
+  }
+
+  &__item--emotions &__header {
+    margin-bottom: 16px;
+  }
+
+  &__item--contacts &__content:first-of-type {
+    margin-bottom: 11px;
+  }
+
+  &__content {
+    align-items: center;
+    display: flex;
+    margin-bottom: 20px;
+
+    &-text {
+      margin-right: 18px;
+      position: relative;
+
+      &--icon {
+        position: relative;
+
+        &::before {
+          background-color: #e6e6e6;
+          //background-position: center;
+          //background-repeat: no-repeat;
+          content: "";
+          height: 58px;
+          position: absolute;
+          left: 200px;
+          top: 32px;
+          width: 58px;
+        }
+
+        &-tel {
+          //background-image: url("");
+        }
+
+        &-email {
+          //background-image: url("");
+        }
+
+      }
+
+      &--radio::before,
+      &--checkbox::before {
+        background-color: $bg-color-lightgrey;
+        content: "";
+        display: block;
+        height: 56px;
+        left: -79px;
+        position: absolute;
+        top: -15px;
+        width: 56px;
+      }
+
+      &--radio::before {
+        border-radius: 50%;
+      }
+
+      &--checkbox::before {
+        border-radius: 5px;
+      }
+
+    }
+
+    &-field {
+      background-color: $bg-color-lightgrey;
+      border: none;
+      font-size: $font-size-medium;
+      font-weight: bold;
+      line-height: $line-height-base;
+      padding: 16px 22px;
+      width: 100%;
+
+      &::-webkit-input-placeholder {
+        color: $color-base;
+      }
+
+    }
+
+    &-list {
+      list-style: none;
+      margin: 0;
+      margin-top: 16px;
+      padding: 0;
+    }
+
+    &-item {
+      font-size: $font-size-medium;
+      font-weight: bold;
+      margin-bottom: 43px;
+      padding-left: 78px;
+      text-transform: none;
+    }
+
+    &-radio,
+    &-checkbox {
+      display: none;
+    }
+
+    &-radio + &-text,
+    &-checkbox + &-text {
+      cursor: pointer;
+    }
+
+    &-radio:checked + &-text--radio::after {
+      background-color: #333333;
+      border-radius: 50%;
+      content: "";
+      height: 22px;
+      left: -62px;
+      position: absolute;
+      top: 2px;
+      width: 22px;
+    }
+
+    &-checkbox:checked + &-text--checkbox::after {
+      //background-image: url("");
+      background-color: black;
+      content: "";
+      display: block;
+      height: 16px;
+      left: -62px;
+      position: absolute;
+      top: 5px;
+      width: 24px;
+    }
+
+    &-error {
+      color: #ff5c5c;
+      display: none;
+      padding-left: 20px;
+      padding-top: 5px;
+      text-transform: none;
+
+      &--show {
+        display: block;
+      }
+
+    }
+
+    &--column {
+      align-items: flex-start;
+      flex-direction: column;
+    }
+
+    &--column &-text {
+      margin-left: 22px;
+      margin-bottom: 6px;
+    }
+
+    &--column &-field {
+      width: 236px;
+    }
+
+  }
+
+  &__text-field {
+    background-color: $bg-color-lightgrey;
+    border: none;
+    font-size: $font-size-medium;
+    font-weight: bold;
+    height: 127px;
+    line-height: $line-height-base;
+    padding: 17px 21px;
+    resize: none;
+    width: 237px;
+  }
+
+  &__text-field::-webkit-input-placeholder {
+    color: $color-base;
+  }
+
 }
 
 @media #{$break-medium} {
 
   .feedback {
-    font-size: 0;
+    flex-direction: row;
+    flex-wrap: wrap;
 
     &__item {
-      display: inline-block;
-      font-size: $font-size-base;
-      min-height: 300px;
-      vertical-align: top;
+      margin-bottom: 34px;
 
-      &--column {
-        min-height: 360px;
-        width: 324px;
+      &::before {
+        content: none;
       }
 
-      &--full-line {
-        width: 648px;
+      &--impression {
+        order: -3;
+        position: relative;
+        width: 50%;
+
+        &::after {
+          border-right: 1px solid $color-separator;
+          content: "";
+          position: absolute;
+          right: 0;
+          top: 5px;
+          height: 292px;
+        }
+
+      }
+
+      &--introduce {
+        margin-left: 58px;
+        width: 41%;
+      }
+
+      &--contacts,
+      &--places,
+      &--emotions {
+        width: 100%;
+      }
+
+      &--contacts .feedback__content,
+      &--places .feedback__content,
+      &--emotions .feedback__content {
+        flex-direction: row;
+      }
+
+      &--impression .feedback__header,
+      &--introduce .feedback__header, {
+        margin-bottom: 57px;
+        text-align: left;
       }
 
     }
 
-    // TODO: Временно, удалить
-    button {
-      font-size: $font-size-base;
+    &__header {
+      font-size: $font-size-large;
+      margin-bottom: 24px;
+
+      &-introduce {
+        display: none;
+      }
+
+    }
+
+    &__content {
+
+      &-item {
+        margin-bottom: 52px;
+        padding-left: 76px;
+      }
+
+      &-text {
+
+        &--radio::before,
+        &--checkbox::before {
+          left: -77px;
+        }
+
+      }
+
+      &-radio:checked + &-text--radio::after {
+        left: -59px;
+      }
+
     }
 
   }
@@ -48,19 +325,6 @@
 @media #{$break-large} {
 
   .feedback {
-
-    &__item {
-
-      &--column {
-        min-height: 360px;
-        width: 480px;
-      }
-
-      &--full-line {
-        width: 960px;
-      }
-
-    }
 
   }
 

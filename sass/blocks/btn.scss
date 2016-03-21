@@ -4,15 +4,11 @@
   color: $color-white;
   cursor: pointer;
   display: inline-block;
-  padding: 10px 10px;
+  font-size: $font-size-large;
+  font-weight: bold;
+  padding: 16px 47px;
   text-decoration: none;
   text-transform: uppercase;
-
-  &--search {
-    font-size: $font-size-large;
-    font-weight: bold;
-    padding: 16px 47px;
-  }
 
 }
 
