@@ -6,6 +6,7 @@
   display: inline-block;
   font-size: $font-size-large;
   font-weight: bold;
+  line-height: $line-height-base;
   padding: 16px 47px;
   text-decoration: none;
   text-transform: uppercase;
@@ -14,9 +15,18 @@
 
 @media #{$break-medium} {
 
-  .btn--search {
-    padding: 16px 0;
-    width: 458px;
+  .btn {
+
+    &--search {
+      padding: 16px 0;
+      width: 458px;
+    }
+
+    &--submit {
+      padding-left: 35px;
+      width: 324px;
+    }
+
   }
 
 }

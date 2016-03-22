@@ -33,77 +33,78 @@
         <p class="feedback-section__text">Помогите нашим отелям стать лучше! оставьте отзыв о них, а также о посещенных вами достопримечательностях.</p>
       </header>
       <form class="feedback" action="#" method="post">
-        <fieldset class="feedback__item feedback__item--introduce">
-          <legend class="feedback__header">Представьтесь<span class="feedback__header-introduce">, пожалуйста:<span></legend>
-          <div class="feedback__content">
-            <label class="feedback__content-text" for="name-field">Имя:</label>
-            <input class="feedback__content-field" type="text" name="name" id="name-field" placeholder="Петр">
+        <fieldset class="feedback__introduce">
+          <legend class="feedback__header">Представьтесь<span class="feedback__header-please">, пожалуйста</span>:</legend>
+          <div class="feedback__introduce-name">
+            <label class="feedback__introduce-caption" for="name-field">Имя:</label>
+            <input class="feedback__introduce-field" type="text" name="name" id="name-field" placeholder="Петр">
           </div>
-          <div class="feedback__content">
-            <label class="feedback__content-text" for="lastname-field">Фамилия:</label>
-            <input class="feedback__content-field" type="text" name="lastname" id="lastname-field" placeholder="Иванов">
+          <div class="feedback__introduce-lastname">
+            <label class="feedback__introduce-caption" for="lastname-field">Фамилия:</label>
+            <input class="feedback__introduce-field" type="text" name="lastname" id="lastname-field" placeholder="Иванов">
           </div>
-          <div class="feedback__content">
-            <label class="feedback__content-text" for="patronymic-field">Отчество:</label>
-            <input class="feedback__content-field" type="text" name="patronymic" id="patronymic-field" placeholder="Александрович">
+          <div class="feedback__introduce-patronymic">
+            <label class="feedback__introduce-caption" for="patronymic-field">Отчество:</label>
+            <input class="feedback__introduce-field" type="text" name="patronymic" id="patronymic-field" placeholder="Александрович">
           </div>
         </fieldset>
-        <fieldset class="feedback__item feedback__item--impression">
+        <fieldset class="feedback__impression">
           <legend class="feedback__header">Ваше общее впечатление:</legend>
-          <ul class="feedback__content-list">
-            <li class="feedback__content-item">
-              <input class="feedback__content-radio" id="positive" type="radio" name="impression" checked>
-              <label class="feedback__content-text feedback__content-text--radio" for="positive">Скорее положительное</label>
+          <ul class="feedback__impression-list">
+            <li class="feedback__impression-item">
+              <input class="feedback__impression-field" id="positive" type="radio" name="impression" checked>
+              <label class="feedback__impression-caption" for="positive">Скорее положительное</label>
             </li>
-            <li class="feedback__content-item">
-              <input class="feedback__content-radio" id="negative" type="radio" name="impression">
-              <label class="feedback__content-text feedback__content-text--radio" for="negative">Скорее отрицательное</label>
+            <li class="feedback__impression-item">
+              <input class="feedback__impression-field" id="negative" type="radio" name="impression">
+              <label class="feedback__impression-caption" for="negative">Скорее отрицательное</label>
             </li>
-            <li class="feedback__content-item">
-              <input class="feedback__content-radio" id="neutral" type="radio" name="impression">
-              <label class="feedback__content-text feedback__content-text--radio" for="neutral">Затрудняюсь ответить</label>
+            <li class="feedback__impression-item">
+              <input class="feedback__impression-field" id="neutral" type="radio" name="impression">
+              <label class="feedback__impression-caption" for="neutral">Затрудняюсь ответить</label>
             </li>
           </ul>
         </fieldset>
-        <fieldset class="feedback__item feedback__item--contacts">
+        <fieldset class="feedback__contacts">
           <legend class="feedback__header">Контактная информация:</legend>
-          <div class="feedback__content feedback__content--column">
-            <label class="feedback__content-text feedback__content-text--icon feedback__content-text--icon-tel" for="phone-field">Контактный телефон:</label>
-            <input class="feedback__content-field" type="tel" name="name" id="phone-field" placeholder="Введите телефон" required>
-            <label class="feedback__content-error feedback__content-error--show" for="phone-field">Ошибка, перепроверьте номер</label>
+          <div class="feedback__contacts-phone">
+            <label class="feedback__contacts-caption feedback__contacts-caption--phone" for="phone-field"><span class="feedback__contacts-contact">Контактный </span>телефон:</label>
+            <input class="feedback__contacts-field" type="tel" name="name" id="phone-field" placeholder="Введите телефон" required>
+            <label class="feedback__contacts-caption-error feedback__contacts-caption-error--show" for="phone-field">Ошибка, перепроверьте номер</label>
           </div>
-          <div class="feedback__content feedback__content--column">
-            <label class="feedback__content-text feedback__content-text feedback__content-text--icon feedback__content-text--icon-email" for="email-field">Электронная почта:</label>
-            <input class="feedback__content-field" type="email" name="name" id="email-field" placeholder="Введите e-mail" required>
-            <label class="feedback__content-error" for="email-field">Ошибка, перепроверьте e-mail</label>
+          <div class="feedback__contacts-email">
+            <label class="feedback__contacts-caption feedback__contacts-caption--email" for="email-field">Электронная почта:</label>
+            <input class="feedback__contacts-field" type="email" name="name" id="email-field" placeholder="Введите e-mail" required>
+            <label class="feedback__contacts-caption-error" for="email-field">Ошибка, перепроверьте e-mail</label>
           </div>
         </fieldset>
-        <fieldset class="feedback__item feedback__item--places">
+        <fieldset class="feedback__places">
           <legend class="feedback__header">Посещенные достопримечательности:</legend>
-          <ul class="feedback__content-list">
-            <li class="feedback__content-item">
-              <input class="feedback__content-checkbox" id="bridge" type="checkbox" name="places" checked>
-              <label class="feedback__content-text feedback__content-text--checkbox" for="bridge">Мост Дьявола</label>
+          <ul class="feedback__places-list">
+            <li class="feedback__places-item">
+              <input class="feedback__places-field" id="bridge" type="checkbox" name="places" checked>
+              <label class="feedback__places-caption" for="bridge">Мост Дьявола</label>
             </li>
-            <li class="feedback__content-item">
-              <input class="feedback__content-checkbox" id="park" type="checkbox" name="places" checked>
-              <label class="feedback__content-text feedback__content-text--checkbox" for="park">Слайд-парк</label>
+            <li class="feedback__places-item">
+              <input class="feedback__places-field" id="park" type="checkbox" name="places" checked>
+              <label class="feedback__places-caption" for="park">Слайд-парк</label>
             </li>
-            <li class="feedback__content-item">
-              <input class="feedback__content-checkbox" id="mountain" type="checkbox" name="places">
-              <label class="feedback__content-text feedback__content-text--checkbox" for="mountain">Гора-Колокол</label>
+            <li class="feedback__places-item">
+              <input class="feedback__places-field" id="mountain" type="checkbox" name="places">
+              <label class="feedback__places-caption" for="mountain">Гора-Колокол</label>
             </li>
-            <li class="feedback__content-item">
-              <input class="feedback__content-checkbox" id="rock" type="checkbox" name="places" checked>
-              <label class="feedback__content-text feedback__content-text--checkbox" for="rock">Красные скалы</label>
+            <li class="feedback__places-item">
+              <input class="feedback__places-field" id="rock" type="checkbox" name="places" checked>
+              <label class="feedback__places-caption" for="rock">Красные скалы</label>
             </li>
           </ul>
         </fieldset>
-        <fieldset class="feedback__item feedback__item--emotions">
+        <fieldset class="feedback__emotions">
           <legend class="feedback__header">Опишите свои эмоции:</legend>
-          <textarea class="feedback__text-field" id="text-field" name="text" placeholder="Опишите подробно все свои восторги"></textarea>
+          <textarea class="feedback__emotions-text" id="text-field" name="text" placeholder="Опишите подробно все свои восторги"></textarea>
         </fieldset>
         <button class="btn btn--submit" type="submit">Отправить отзыв</button>
+        <div class="feedback__required-fields">* — обязательные поля</div>
       </form>
     </section>
     <div class="modal-form modal-form--something-wrong">
