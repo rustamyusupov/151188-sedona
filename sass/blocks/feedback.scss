@@ -455,6 +455,7 @@
 @media #{$break-large} {
 
   .feedback {
+    margin-bottom: 103px;
 
     &__introduce,
     &__impression {
@@ -526,6 +527,11 @@
 
       }
 
+      &-email &-caption::after {
+        left: 423px;
+        top: -17px;
+      }
+
       &-field {
         order: 3;
         width: 56.5%;
@@ -538,9 +544,37 @@
     }
 
     &__places {
+      margin-bottom: 30px;
 
       &-list {
         flex-wrap: nowrap;
+        justify-content: space-between;
+        margin: 0;
+      }
+
+      &-item {
+        margin-bottom: 51px;
+        margin-left: 0;
+        width: unset;
+
+        // TODO: Тоже не хорошее решение, но иначе не знаю как пиксель в пиксель подогнать
+        &:nth-child(4) {
+          margin-right: 2px;
+        }
+
+      }
+
+      &-caption {
+        padding-left: 80px;
+      }
+
+    }
+
+    &__emotions {
+      margin-bottom: 49px;
+
+      &-text {
+        width: 918px;
       }
 
     }

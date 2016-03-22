@@ -30,3 +30,12 @@
   }
 
 }
+
+@media #{$break-large} {
+
+  .btn--submit {
+    padding-left: 50px;
+    width: 480px;
+  }
+
+}
