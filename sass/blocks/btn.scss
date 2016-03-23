@@ -11,6 +11,11 @@
   text-decoration: none;
   text-transform: uppercase;
 
+  &--feedback-sent {
+    font-size: $font-size-medium;
+    padding: 16px 76px;
+  }
+
 }
 
 @media #{$break-medium} {
