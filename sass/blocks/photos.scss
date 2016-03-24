@@ -1,6 +1,6 @@
 .photos {
   @include container;
-  margin-bottom: 12px;
+  margin-bottom: 11px;
 
   &__row {
     display: flex;
@@ -9,13 +9,13 @@
 
   &__header {
     text-align: center;
-    margin-bottom: 49px;
+    margin-bottom: 52px;
   }
 
   &__title {
     font-size: $font-size-medium;
     margin: 0;
-    margin-bottom: 25px;
+    margin-bottom: 26px;
   }
 
   &__text {
@@ -57,12 +57,16 @@
 @media #{$break-large} {
 
   .photos {
-    margin-bottom: 72px;
+    margin-bottom: 70px;
     width: 1200px;
 
     &__header {
-      margin-top: 113px;
+      margin-top: 110px;
       margin-bottom: 70px;
+    }
+
+    &__title {
+      margin-bottom: 33px;
     }
 
   }

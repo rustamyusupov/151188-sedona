@@ -1,5 +1,5 @@
 .photo {
-  margin-bottom: 24px;
+  margin-bottom: 40px;
   position: relative;
 
   &::before {
@@ -13,19 +13,22 @@
 
   &__picture {
     @include size(280px);
+    margin-bottom: 14px;
   }
 
   &__description {
     display: flex;
     flex-direction: column;
     line-height: $line-height-medium;
-    margin-bottom: 15px;
-    padding-top: 16px;
+  }
+
+  &__title {
+    margin-bottom: 1px;
   }
 
   &__author {
     text-transform: none;
-    margin-bottom: 8px;
+    margin-bottom: 9px;
   }
 
   &__likes {
@@ -51,7 +54,7 @@
     content: "";
     left: -20px;
     position: absolute;
-    bottom: -2px;
+    bottom: -18px;
     width: 320px;
   }
 
@@ -68,6 +71,7 @@
 
     &__picture {
       @include size(324px, 267px);
+      margin-bottom: 0;
 
       &--big-size {
         @include size(648px, 400px);

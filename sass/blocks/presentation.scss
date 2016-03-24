@@ -1,5 +1,5 @@
 .presentation {
-  margin-bottom: 143px;
+  margin-bottom: 141px;
   position: relative;
 
   &__title {
@@ -11,7 +11,7 @@
   &__text {
     line-height: $line-height-medium;
     margin: 0;
-    margin-bottom: 34px;
+    margin-bottom: 37px;
     padding: 0 10px;
   }
 
@@ -106,11 +106,11 @@
 
   .presentation {
     @include container;
-    margin-bottom: 78px;
+    margin-bottom: 77px;
 
     &__title {
       font-size: $font-size-extra;
-      margin-bottom: 30px;
+      margin-bottom: 32px;
     }
 
     &__text {
@@ -160,11 +160,15 @@
 @media #{$break-large} {
 
   .presentation {
-    margin-bottom: 123px;
+    margin-bottom: 121px;
     width: 800px;
 
+    &__title {
+      margin-bottom: 31px;
+    }
+
     &__text {
-      margin-bottom: 70px;
+      margin-bottom: 73px;
     }
 
     &__content {
