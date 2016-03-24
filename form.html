@@ -33,22 +33,22 @@
         <p class="feedback-section__text">Помогите нашим отелям стать лучше! оставьте отзыв о них, а также о посещенных вами достопримечательностях.</p>
       </header>
       <form class="feedback" action="#" method="post">
-        <fieldset class="feedback__introduce">
-          <legend class="feedback__header">Представьтесь<span class="feedback__header-please">, пожалуйста</span>:</legend>
+        <fieldset class="feedback__item feedback__item--introduce">
+          <legend class="feedback__header">Представьтесь<span class="feedback__please">, пожалуйста</span>:</legend>
           <div class="feedback__introduce-name">
             <label class="feedback__introduce-caption" for="name-field">Имя:</label>
-            <input class="feedback__introduce-field" type="text" name="name" id="name-field" placeholder="Петр">
+            <input class="feedback__field feedback__field--introduce" type="text" name="name" id="name-field" placeholder="Петр">
           </div>
-          <div class="feedback__introduce-lastname">
+          <div class="feedback__introduce-name">
             <label class="feedback__introduce-caption" for="lastname-field">Фамилия:</label>
-            <input class="feedback__introduce-field" type="text" name="lastname" id="lastname-field" placeholder="Иванов">
+            <input class="feedback__field feedback__field--introduce" type="text" name="lastname" id="lastname-field" placeholder="Иванов">
           </div>
-          <div class="feedback__introduce-patronymic">
+          <div class="feedback__introduce-name">
             <label class="feedback__introduce-caption" for="patronymic-field">Отчество:</label>
-            <input class="feedback__introduce-field" type="text" name="patronymic" id="patronymic-field" placeholder="Александрович">
+            <input class="feedback__field feedback__field--introduce" type="text" name="patronymic" id="patronymic-field" placeholder="Александрович">
           </div>
         </fieldset>
-        <fieldset class="feedback__impression">
+        <fieldset class="feedback__item feedback__item--impression">
           <legend class="feedback__header">Ваше общее впечатление:</legend>
           <ul class="feedback__impression-list">
             <li class="feedback__impression-item">
@@ -65,20 +65,20 @@
             </li>
           </ul>
         </fieldset>
-        <fieldset class="feedback__contacts">
+        <fieldset class="feedback__item feedback__item--contacts">
           <legend class="feedback__header">Контактная информация:</legend>
           <div class="feedback__contacts-phone">
             <label class="feedback__contacts-caption feedback__contacts-caption--phone" for="phone-field"><span class="feedback__contacts-contact">Контактный </span>телефон:</label>
-            <input class="feedback__contacts-field" type="tel" name="name" id="phone-field" placeholder="Введите телефон" required>
+            <input class="feedback__field feedback__field--contacts" type="tel" name="name" id="phone-field" placeholder="Введите телефон" required>
             <label class="feedback__contacts-caption-error feedback__contacts-caption-error--show" for="phone-field">Ошибка, перепроверьте номер</label>
           </div>
           <div class="feedback__contacts-email">
             <label class="feedback__contacts-caption feedback__contacts-caption--email" for="email-field">Электронная почта:</label>
-            <input class="feedback__contacts-field" type="email" name="name" id="email-field" placeholder="Введите e-mail" required>
+            <input class="feedback__field feedback__field--contacts" type="email" name="name" id="email-field" placeholder="Введите e-mail" required>
             <label class="feedback__contacts-caption-error" for="email-field">Ошибка, перепроверьте e-mail</label>
           </div>
         </fieldset>
-        <fieldset class="feedback__places">
+        <fieldset class="feedback__item feedback__item--places">
           <legend class="feedback__header">Посещенные достопримечательности:</legend>
           <ul class="feedback__places-list">
             <li class="feedback__places-item">
@@ -99,7 +99,7 @@
             </li>
           </ul>
         </fieldset>
-        <fieldset class="feedback__emotions">
+        <fieldset class="feedback__item feedback__item--emotions">
           <legend class="feedback__header">Опишите свои эмоции:</legend>
           <textarea class="feedback__emotions-text" id="text-field" name="text" placeholder="Опишите подробно все свои восторги"></textarea>
         </fieldset>

@@ -3,11 +3,13 @@
   flex-direction: column;
   margin-bottom: 73px;
 
-  &__introduce,
-  &__impression,
-  &__contacts,
-  &__places,
-  &__emotions {
+  // TODO: Можно напрямую через тег или нужно через класс?
+  input:focus,
+  textarea:focus {
+    outline: none;
+  }
+
+  &__item {
     border: none;
     margin: 0;
     padding: 0;
@@ -21,52 +23,65 @@
       top: -19px;
       width: 320px
     }
-  }
 
-  &__introduce,
-  &__contacts {
+    &--introduce {
+      margin-bottom: 24px;
+      order: -2;
+    }
 
-    &-field {
-      background-color: $bg-color-lightgrey;
-      border: none;
-      font-size: $font-size-medium;
-      font-weight: bold;
-      line-height: $line-height-base;
-      padding: 16px 22px;
+    &--contacts {
+      margin-bottom: 37px;
+      order: -1;
+    }
 
-      &::-webkit-input-placeholder {
-        color: $color-base;
-      }
+    &--impression {
+      margin-bottom: 19px;
+    }
 
+    &--places {
+      margin-bottom: 6px;
+    }
+
+    &--emotions {
+      margin-bottom: 43px;
+    }
+
+    &--emotions .feedback__header {
+      margin-bottom: 17px;
     }
 
   }
 
-  &__introduce {
-    margin-bottom: 24px;
-    order: -2;
+  &__field {
+    background-color: $bg-color-lightgrey;
+    border: none;
+    font-size: $font-size-medium;
+    font-weight: bold;
+    line-height: $line-height-base;
+    padding: 16px 22px;
 
-    &-name,
-    &-lastname,
-    &-patronymic {
-      align-items: center;
-      display: flex;
-      margin-bottom: 20px;
+    &::-webkit-input-placeholder {
+      color: $color-base;
     }
 
-    &-caption {
-      margin-right: 19px;
-    }
-
-    &-field {
+    &--introduce {
       width: 100%;
     }
 
   }
 
+
+  &__introduce-name {
+    align-items: center;
+    display: flex;
+    margin-bottom: 20px;
+  }
+
+  &__introduce-caption {
+    margin-right: 19px;
+  }
+
   &__contacts {
-    margin-bottom: 37px;
-    order: -1;
 
     &-phone,
     &-email {
@@ -85,7 +100,7 @@
         //background-position: center;
         //background-repeat: no-repeat;
         content: "";
-        height: 58px;
+        height: 57px;
         position: absolute;
         right: 0;
         top: 32px;
@@ -160,10 +175,9 @@
   }
 
   &__impression {
-    margin-bottom: 19px;
 
     &-item {
-      margin-bottom: 42px;
+      margin-bottom: 52px;
       margin-top: 16px;
     }
 
@@ -189,7 +203,6 @@
   }
 
   &__places {
-    margin-bottom: 6px;
 
     &-item {
       margin-bottom: 53px;
@@ -219,7 +232,6 @@
   }
 
   &__emotions {
-    margin-bottom: 43px;
 
     &-text {
       background-color: $bg-color-lightgrey;
@@ -238,10 +250,6 @@
 
     }
 
-  }
-
-  &__emotions &__header {
-    margin-bottom: 17px;
   }
 
   &__header {
@@ -265,11 +273,7 @@
     justify-content: space-between;
     margin-bottom: 97px;
 
-    &__introduce,
-    &__impression,
-    &__contacts,
-    &__places,
-    &__emotions {
+    &__item {
       position: relative;
 
       &::before {
@@ -283,33 +287,65 @@
         z-index: -1;
       }
 
-    }
+      &--introduce,
+      &--impression {
+        margin-bottom: 34px;
 
-    &__contacts,
-    &__places,
-    &__emotions {
-      width: 100%;
-    }
+        &::before {
+          content: none;
+        }
 
-    &__introduce,
-    &__impression {
-      margin-bottom: 34px;
+      }
 
-      &::before {
-        content: none;
+      &--introduce {
+        margin-left: 56px;
+        width: 41%;
+      }
+
+      &--impression {
+        order: -3;
+        position: relative;
+        width: 50%;
+      }
+
+      &--contacts,
+      &--places,
+      &--emotions {
+        width: 100%;
+      }
+
+      &--contacts {
+        margin-bottom: 28px;
+      }
+
+      &--contacts .feedback__header {
+        margin-bottom: 24px;
+        padding: 0 62px;
+      }
+
+      &--emotions {
+        margin-bottom: 50px;
+      }
+
+      &--introduce .feedback__header,
+      &--impression .feedback__header {
+        margin-bottom: 57px;
+        text-align: left;
+      }
+
+      &--places .feedback__header {
+        margin-bottom: 46px;
+        width: 401px;
+      }
+
+      &--emotions .feedback__header {
+        margin-bottom: 57px;
+        padding: 0 76px;
       }
 
     }
 
-    &__introduce {
-      margin-left: 56px;
-      width: 41%;
-    }
-
     &__impression {
-      order: -3;
-      position: relative;
-      width: 50%;
 
       &-item {
         margin-bottom: 51px;
@@ -332,7 +368,6 @@
     }
 
     &__contacts {
-      margin-bottom: 28px;
 
       &-phone,
       &-email {
@@ -359,19 +394,14 @@
 
       }
 
-      &-field {
-        order: 3;
-        width: 100%;
-      }
+    }
 
+    &__field--contacts {
+      order: 3;
+      width: 100%;
     }
 
     &__places {
-      margin-bottom: 32px;
-
-      &::before {
-        top: 25px;
-      }
 
       &-list {
         display: flex;
@@ -402,45 +432,27 @@
 
     }
 
-    &__emotions {
-      margin-bottom: 50px;
-
-      &-text {
+    &__emotions-text {
         width: 606px;
-      }
-
     }
 
     &__header {
       background-color: $color-white;
       font-size: $font-size-large;
       z-index: 2;
+    }
 
-      &-please {
-        display: none;
+    &__please {
+      display: none;
+    }
+
+    &__item--places {
+      margin-bottom: 32px;
+
+      &::before {
+        top: 25px;
       }
 
-    }
-
-    &__introduce &__header,
-    &__impression &__header {
-      margin-bottom: 57px;
-      text-align: left;
-    }
-
-    &__contacts &__header {
-      margin-bottom: 24px;
-      padding: 0 62px;
-    }
-
-    &__places &__header {
-      margin-bottom: 46px;
-      width: 401px;
-    }
-
-    &__emotions &__header {
-      margin-bottom: 57px;
-      padding: 0 76px;
     }
 
     &__required-fields {
@@ -457,14 +469,34 @@
   .feedback {
     margin-bottom: 103px;
 
-    &__introduce,
-    &__impression {
-      margin-bottom: 32px;
-    }
+    &__item {
 
-    &__introduce {
-      margin-left: 0px;
-      width: 41.7%;
+      &--introduce,
+      &--impression {
+        margin-bottom: 32px;
+      }
+
+      &--introduce {
+        margin-left: 0px;
+        width: 41.7%;
+      }
+
+      &--places {
+        margin-bottom: 30px;
+      }
+
+      &--emotions {
+        margin-bottom: 49px;
+      }
+
+      &--impression .feedback__header {
+        margin-left: 79px;
+      }
+
+      &--contacts .feedback__header {
+        margin-bottom: 41px;
+      }
+
     }
 
     &__impression {
@@ -532,19 +564,18 @@
         top: -17px;
       }
 
-      &-field {
-        order: 3;
-        width: 56.5%;
-      }
-
       &-contact {
         display: none;
       }
 
     }
 
+    &__field--contacts {
+      order: 3;
+      width: 56.5%;
+    }
+
     &__places {
-      margin-bottom: 30px;
 
       &-list {
         flex-wrap: nowrap;
@@ -570,29 +601,12 @@
 
     }
 
-    &__emotions {
-      margin-bottom: 49px;
-
-      &-text {
-        width: 918px;
-      }
-
+    &__emotions-text {
+      width: 918px;
     }
 
-    &__header {
-
-      &-please {
-        display: inline;
-      }
-
-    }
-
-    &__impression &__header {
-      margin-left: 79px;
-    }
-
-    &__contacts &__header {
-      margin-bottom: 41px;
+    &__please {
+      display: inline;
     }
 
   }
