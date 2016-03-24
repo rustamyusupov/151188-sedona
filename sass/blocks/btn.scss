@@ -22,6 +22,11 @@
 
   .btn {
 
+    &--feedback-sent {
+      font-size: $font-size-large;
+      padding: 16px 155px;
+    }
+
     &--search {
       padding: 16px 0;
       width: 458px;

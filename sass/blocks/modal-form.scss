@@ -36,8 +36,10 @@
 
   .modal-form {
     left: 50%;
-    min-height: 345px;
+    padding-bottom: 44px;
     transform: translateX(-50%);
+
+    top: 1170px;
 
     &--something-wrong {
       width: 400px;
@@ -47,14 +49,23 @@
       width: 640px;
     }
 
+    &__header {
+      font-size: $font-size-extra;
+      padding-bottom: 5px;
+      padding-top: 64px;
+    }
+
     &__text {
+      margin-bottom: 45px;
+      padding: 25px 80px;
+      padding-bottom: 35px;
 
       &--something-wrong {
         width: 300px;
       }
 
       &--feedback-sent {
-        width: 420px;
+        //width: 420px;
       }
 
     }
