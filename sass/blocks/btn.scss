@@ -16,6 +16,11 @@
     padding: 16px 76px;
   }
 
+  &--something-wrong {
+    font-size: $font-size-medium;
+    padding: 16px 79px;
+  }
+
 }
 
 @media #{$break-medium} {
@@ -30,6 +35,11 @@
     &--search {
       padding: 16px 0;
       width: 458px;
+    }
+
+    &--something-wrong {
+      font-size: $font-size-large;
+      padding: 16px 122px;
     }
 
     &--submit {

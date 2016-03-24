@@ -3,18 +3,30 @@
   box-shadow: 0 7px 15px 0 rgba(0, 0, 0, 0.15);
   display: none;
   text-align: center;
-  padding-bottom: 20px;
+  padding-bottom: 21px;
   position: absolute;
   width: 320px;
 
-  top: 1980px;
+  // TODO: Временно
+  top: 2000px;
+
+  &--something-wrong {
+    background-color: $color-white;
+    padding-bottom: 36px;
+  }
 
   &__header {
     background-color: $color-white;
     font-size: $font-size-medium;
     font-weight: bold;
     margin: 0;
+    padding-bottom: 25px;
     padding-top: 43px;
+
+    &--something-wrong {
+      padding-top: 40px;
+    }
+
   }
 
   &__text {
@@ -22,8 +34,14 @@
     line-height: $line-height-medium;
     margin: 0 auto;
     margin-bottom: 20px;
-    padding: 25px 40px;
-    padding-bottom: 34px;
+    padding: 0 40px;
+    padding-bottom: 37px;
+
+    &--something-wrong {
+      padding: 0 45px;
+      padding-bottom: 5px;
+    }
+
   }
 
   &--show {
@@ -39,9 +57,11 @@
     padding-bottom: 44px;
     transform: translateX(-50%);
 
+    // TODO: Временно
     top: 1170px;
 
     &--something-wrong {
+      padding-bottom: 49px;
       width: 400px;
     }
 
@@ -53,19 +73,24 @@
       font-size: $font-size-extra;
       padding-bottom: 5px;
       padding-top: 64px;
+
+      &--something-wrong {
+        line-height: $line-height-large;
+        padding: 0 80px;
+        padding-top: 56px;
+      }
+
     }
 
     &__text {
       margin-bottom: 45px;
       padding: 25px 80px;
-      padding-bottom: 35px;
+      padding-bottom: 34px;
 
       &--something-wrong {
-        width: 300px;
-      }
-
-      &--feedback-sent {
-        //width: 420px;
+        margin-bottom: 34px;
+        padding: 24px 60px;
+        padding-bottom: 0px;
       }
 
     }
