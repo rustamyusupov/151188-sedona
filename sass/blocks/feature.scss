@@ -1,7 +1,7 @@
 .feature {
   color: $color-white;
   padding-top: 40px;
-  padding-bottom: 25px;
+  padding-bottom: 26px;
 
   &__title {
     display: block;
@@ -47,11 +47,15 @@
 
   }
 
+  &--bg-grey &__title {
+    margin-bottom: 9px;
+  }
+
   &--icon {
     background-color: $color-white;
     color: $color-base;
+    margin-bottom: 28px;
     padding: 0;
-    padding-bottom: 27px;
     padding-left: 70px;
     position: relative;
     text-align: left;
@@ -86,7 +90,7 @@
   }
 
   &--icon &__title {
-    margin-bottom: 15px;
+    margin-bottom: 14px;
   }
 
   &--icon &__text {
@@ -101,12 +105,12 @@
 
   .feature {
     padding-bottom: 23px;
-    padding-top: 45px;
+    padding-top: 43px;
     width: 256px;
 
     &__title {
       font-size: $font-size-large;
-      margin-bottom: 10px;
+      margin-bottom: 12px;
       padding: 0 50px;
     }
 
@@ -118,7 +122,7 @@
     &--bg-grey {
       padding: 0;
       padding-bottom: 23px;
-      padding-top: 45px;
+      padding-top: 43px;
 
       &::after {
         content: none;
@@ -126,16 +130,19 @@
 
     }
 
+    &--bg-grey &__title {
+      margin-bottom: 13px;
+    }
+
     &--bg-grey &__text {
       padding: 0 54px;
-
       word-wrap: break-word;
     }
 
     &--icon {
       margin-bottom: 52px;
       padding: 0 49px;
-      padding-top: 124px;
+      padding-top: 121px;
       text-align: center;
 
       &-home::before {
@@ -167,7 +174,7 @@
     }
 
     &--icon &__title {
-      margin-bottom: 21px;
+      margin-bottom: 23px;
       padding: 0 30px;
     }
 
@@ -182,13 +189,13 @@
 @media #{$break-large} {
 
   .feature {
-    padding-bottom: 36px;
+    padding-bottom: 33px;
     padding-top: 52px;
     width: 400px;
 
     &__title {
       font-size: $font-size-large;
-      margin-bottom: 10px;
+      margin-bottom: 11px;
       padding: 0 120px;
     }
 
@@ -198,7 +205,8 @@
     }
 
     &--bg-grey {
-      padding: 45px 20px;
+      margin-bottom: 1px;
+      padding: 43px 20px;
     }
 
     &--bg-grey &__text {
@@ -206,8 +214,8 @@
     }
 
     &--icon {
-      margin-bottom: 37px;
-      padding-top: 124px;
+      margin-bottom: 40px;
+      padding-top: 122px;
 
       &-home::before,
       &-food::before {
@@ -223,6 +231,11 @@
 
       }
 
+    }
+
+    &--icon &__title {
+      margin-bottom: 22px;
+      padding: 0 30px;
     }
 
     &--icon &__text {
