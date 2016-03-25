@@ -59,11 +59,8 @@
 
 @media #{$break-medium} {
 
-  .header {
-
-    &__menu-toggle {
-      display: none;
-    }
+  .header__menu-toggle {
+    display: none;
   }
 
 }

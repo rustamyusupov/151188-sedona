@@ -66,27 +66,27 @@
       position: absolute;
     }
 
-    &-home::before {
-      height: 36px;
-      left: 22px;
-      top: -9px;
-      width: 37px;
-    }
+  }
 
-    &-souvenirs::before {
-      height: 37px;
-      left: 25px;
-      top: -11px;
-      width: 32px;
-    }
+  &--icon-home::before {
+    height: 36px;
+    left: 22px;
+    top: -9px;
+    width: 37px;
+  }
 
-    &-food::before {
-      height: 34px;
-      left: 19px;
-      top: -4px;
-      width: 38px;
-    }
+  &--icon-souvenirs::before {
+    height: 37px;
+    left: 25px;
+    top: -11px;
+    width: 32px;
+  }
 
+  &--icon-food::before {
+    height: 34px;
+    left: 19px;
+    top: -4px;
+    width: 38px;
   }
 
   &--icon &__title {
@@ -144,31 +144,30 @@
       padding: 0 49px;
       padding-top: 121px;
       text-align: center;
+    }
 
-      &-home::before {
-        height: 72px;
-        left: 90px;
-        top: 25px;
-        width: 75px;
-      }
+    &--icon-home::before {
+      height: 72px;
+      left: 90px;
+      top: 25px;
+      width: 75px;
+    }
 
-      &-food::before {
-        height: 68px;
-        left: 91px;
-        top: 28px;
-        width: 77px;
-      }
+    &--icon-food::before {
+      height: 68px;
+      left: 91px;
+      top: 28px;
+      width: 77px;
+    }
 
-      &-souvenirs {
-        order: 1;
+    &--icon-souvenirs {
+      order: 1;
 
-        &::before {
-          height: 75px;
-          left: 100px;
-          top: 22px;
-          width: 64px;
-        }
-
+      &::before {
+        height: 75px;
+        left: 100px;
+        top: 22px;
+        width: 64px;
       }
 
     }
@@ -216,19 +215,18 @@
     &--icon {
       margin-bottom: 40px;
       padding-top: 122px;
+    }
 
-      &-home::before,
-      &-food::before {
-        left: 162px;
-      }
+    &--icon-home::before,
+    &--icon-food::before {
+      left: 162px;
+    }
 
-      &-souvenirs {
-        order: 1;
+    &--icon-souvenirs {
+      order: 1;
 
-        &::before {
-          left: 168px;
-        }
-
+      &::before {
+        left: 168px;
       }
 
     }
