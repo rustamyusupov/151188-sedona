@@ -1,24 +1,112 @@
 .welcome {
+  margin-bottom: 38px;
+  position: relative;
 
   &__image {
     @include size(320px, 389px);
+
+    &--inner-page {
+      height: 159px;
+    }
+
   }
 
-  @include outlined;
+  &::after {
+    background-image:
+      linear-gradient(
+        to top right,
+        $color-white 50%,
+        transparent 50%
+      ),
+      linear-gradient(
+        to top left,
+        $color-white 50%,
+        transparent 50%
+      );
+    background-position: 0 0, 100% 0;
+    background-repeat: no-repeat;
+    background-size: 50.1% 100%;
+    bottom: 0;
+    content: "";
+    height: 26px;
+    left: 50%;
+    position: absolute;
+    transform: translateX(-50%);
+    width: 100%;
+    z-index: 1;
+  }
+
 }
 
 @media #{$break-medium} {
 
-  .welcome__image {
+  .welcome {
+    margin-bottom: 50px;
+
+    &__image {
       @include size(768px, 518px);
+
+      &--inner-page {
+        height: 290px;
+      }
+
+    }
+
+    &::before {
+      background-image:
+        linear-gradient(
+          to top right,
+          $color-white 50%,
+          transparent 50%
+        ),
+        linear-gradient(
+          to top left,
+          $color-white 50%,
+          transparent 50%
+        );
+      background-position: 0 0, 100% 0;
+      background-repeat: no-repeat;
+      background-size: 50.1% 100%;
+      bottom: 0;
+      content: "";
+      height: 58px;
+      left: 50%;
+      position: absolute;
+      transform: translateX(-50%);
+      width: 91%;
+      z-index: 1;
+    }
+
+    &::after {
+      height: 38px;
+    }
+
   }
 
 }
 
 @media #{$break-large} {
 
-  .welcome__image {
+  .welcome {
+
+    &__image {
       width: 1200px;
+
+      &--inner-page {
+        height: 302px;
+      }
+
+    }
+
+    &::before {
+      height: 58px;
+      width: 58%;
+    }
+
+    &::after {
+      height: 57px;
+    }
+
   }
 
 }

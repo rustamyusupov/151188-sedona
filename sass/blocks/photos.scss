@@ -1,37 +1,54 @@
 .photos {
   @include container;
+  margin-bottom: 11px;
+
+  &__row {
+    display: flex;
+    flex-direction: column;
+  }
 
   &__header {
     text-align: center;
-    min-height: 190px;
+    margin-bottom: 52px;
   }
 
   &__title {
+    font-size: $font-size-medium;
     margin: 0;
+    margin-bottom: 26px;
   }
 
   &__text {
+    line-height: $line-height-medium;
     margin: 0;
+    padding: 0 5px;
   }
 
-  @include outlined;
 }
 
 @media #{$break-medium} {
 
   .photos {
+    margin-bottom: 68px;
+
+    &__row {
+      flex-direction: row;
+      flex-wrap: wrap;
+    }
 
     &__header {
-      min-height: 248px;
+      margin-top: 76px;
+      margin-bottom: 68px;
+    }
+
+    &__title {
+      font-size: $font-size-extra;
+      margin-bottom: 30px;
     }
 
     &__text {
       margin: 0 auto;
       width: 430px;
-    }
-
-    &__row {
-      font-size: 0;
     }
 
   }
@@ -40,10 +57,16 @@
 @media #{$break-large} {
 
   .photos {
+    margin-bottom: 70px;
     width: 1200px;
 
     &__header {
-      min-height: 287px;
+      margin-top: 110px;
+      margin-bottom: 70px;
+    }
+
+    &__title {
+      margin-bottom: 33px;
     }
 
   }

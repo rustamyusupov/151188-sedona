@@ -1,13 +1,21 @@
 .social {
-  @include outlined;
+  display: flex;
+  justify-content: center;
+  margin-bottom: 40px;
 }
 
 @media #{$break-medium} {
 
   .social {
-    display: inline-block;
-    font-size: $font-size-base;
-    vertical-align: middle;
+    margin-right: 10px;
   }
-  
+
+}
+
+@media #{$break-large} {
+
+  .social {
+    margin-right: 97px;
+  }
+
 }

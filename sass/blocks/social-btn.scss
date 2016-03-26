@@ -1,0 +1,13 @@
+.social-btn {
+  background-color: $bg-color-base;
+  background-repeat: no-repeat;
+  font-size: 0;
+  height: 48px;
+  margin-right: 6px;
+  width: 46px;
+
+  &:last-child {
+    margin-right: 0;
+  }
+
+}

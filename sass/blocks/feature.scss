@@ -1,20 +1,186 @@
 .feature {
-  @include container;
-  min-height: 170px;
+  color: $color-white;
+  padding-top: 40px;
+  padding-bottom: 26px;
+
+  &__title {
+    display: block;
+    font-size: $font-size-medium;
+    margin-bottom: 8px;
+  }
 
   &__text {
     margin: 0;
+    margin-bottom: 15px;
+    line-height: $line-height-small;
+    padding: 0 15px;
   }
 
-  @include outlined;
+  &--bg-blue {
+    background-color: $bg-color-base;
+  }
+
+  &--bg-grey {
+    background-color: $bg-color-grey;
+    color: $color-base;
+    padding: 0 20px;
+    padding-bottom: 14px;
+    padding-top: 27px;
+    position: relative;
+
+    &::after {
+      content: "";
+      border-bottom: 1px solid #d6d6d6;
+      bottom: 1px;
+      left: 20px;
+      position: absolute;
+      width: 280px;
+    }
+
+    &:last-child {
+
+      &::after {
+        content: none;
+      }
+
+    }
+
+  }
+
+  &--bg-grey &__title {
+    margin-bottom: 9px;
+  }
+
+  &--icon {
+    background-color: $color-white;
+    color: $color-base;
+    margin-bottom: 28px;
+    padding: 0;
+    padding-left: 70px;
+    position: relative;
+    text-align: left;
+
+    &::before {
+      content: "";
+      background-color: $bg-color-base;
+      position: absolute;
+    }
+
+  }
+
+  &--icon-home::before {
+    height: 36px;
+    left: 22px;
+    top: -9px;
+    width: 37px;
+  }
+
+  &--icon-souvenirs::before {
+    height: 37px;
+    left: 25px;
+    top: -11px;
+    width: 32px;
+  }
+
+  &--icon-food::before {
+    height: 34px;
+    left: 19px;
+    top: -4px;
+    width: 38px;
+  }
+
+  &--icon &__title {
+    margin-bottom: 14px;
+  }
+
+  &--icon &__text {
+    margin: 0;
+    padding: 0;
+    padding-right: 35px;
+  }
+
 }
 
 @media #{$break-medium} {
 
   .feature {
-    float: left;
-    min-height: 256px;
+    padding-bottom: 23px;
+    padding-top: 43px;
     width: 256px;
+
+    &__title {
+      font-size: $font-size-large;
+      margin-bottom: 12px;
+      padding: 0 50px;
+    }
+
+    &__text {
+      margin-bottom: 21px;
+      padding: 0 40px;
+    }
+
+    &--bg-grey {
+      padding: 0;
+      padding-bottom: 23px;
+      padding-top: 43px;
+
+      &::after {
+        content: none;
+      }
+
+    }
+
+    &--bg-grey &__title {
+      margin-bottom: 13px;
+    }
+
+    &--bg-grey &__text {
+      padding: 0 54px;
+      word-wrap: break-word;
+    }
+
+    &--icon {
+      margin-bottom: 52px;
+      padding: 0 49px;
+      padding-top: 121px;
+      text-align: center;
+    }
+
+    &--icon-home::before {
+      height: 72px;
+      left: 90px;
+      top: 25px;
+      width: 75px;
+    }
+
+    &--icon-food::before {
+      height: 68px;
+      left: 91px;
+      top: 28px;
+      width: 77px;
+    }
+
+    &--icon-souvenirs {
+      order: 1;
+
+      &::before {
+        height: 75px;
+        left: 100px;
+        top: 22px;
+        width: 64px;
+      }
+
+    }
+
+    &--icon &__title {
+      margin-bottom: 23px;
+      padding: 0 30px;
+    }
+
+    &--icon &__text {
+      padding: 0;
+    }
+
   }
 
 }
@@ -22,7 +188,58 @@
 @media #{$break-large} {
 
   .feature {
+    padding-bottom: 33px;
+    padding-top: 52px;
     width: 400px;
+
+    &__title {
+      font-size: $font-size-large;
+      margin-bottom: 11px;
+      padding: 0 120px;
+    }
+
+    &__text {
+      margin-bottom: 21px;
+      padding: 0 84px;
+    }
+
+    &--bg-grey {
+      margin-bottom: 1px;
+      padding: 43px 20px;
+    }
+
+    &--bg-grey &__text {
+      padding: 0 45px;
+    }
+
+    &--icon {
+      margin-bottom: 40px;
+      padding-top: 122px;
+    }
+
+    &--icon-home::before,
+    &--icon-food::before {
+      left: 162px;
+    }
+
+    &--icon-souvenirs {
+      order: 1;
+
+      &::before {
+        left: 168px;
+      }
+
+    }
+
+    &--icon &__title {
+      margin-bottom: 22px;
+      padding: 0 30px;
+    }
+
+    &--icon &__text {
+      padding: 0 24px;
+    }
+
   }
 
 }

@@ -1,0 +1,61 @@
+.btn {
+  background-color: $bg-color-base;
+  border: none;
+  color: $color-white;
+  cursor: pointer;
+  display: inline-block;
+  font-size: $font-size-large;
+  font-weight: bold;
+  line-height: $line-height-base;
+  padding: 16px 47px;
+  text-decoration: none;
+  text-transform: uppercase;
+
+  &--feedback-sent {
+    font-size: $font-size-medium;
+    padding: 16px 76px;
+  }
+
+  &--something-wrong {
+    font-size: $font-size-medium;
+    padding: 16px 79px;
+  }
+
+}
+
+@media #{$break-medium} {
+
+  .btn {
+
+    &--feedback-sent {
+      font-size: $font-size-large;
+      padding: 16px 155px;
+    }
+
+    &--search {
+      padding: 16px 0;
+      width: 458px;
+    }
+
+    &--something-wrong {
+      font-size: $font-size-large;
+      padding: 16px 122px;
+    }
+
+    &--submit {
+      padding-left: 35px;
+      width: 324px;
+    }
+
+  }
+
+}
+
+@media #{$break-large} {
+
+  .btn--submit {
+    padding-left: 50px;
+    width: 480px;
+  }
+
+}

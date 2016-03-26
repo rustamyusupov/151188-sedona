@@ -1,32 +1,67 @@
 .modal-form {
-  // TODO: Временно, убрать
-  background-color: lightgrey;
+  background-color: $bg-color-lightgrey;
+  box-shadow: 0 7px 15px 0 rgba(0, 0, 0, 0.15);
   display: none;
-  min-height: 320px;
   text-align: center;
+  padding-bottom: 21px;
   position: absolute;
   width: 320px;
 
+  // TODO: Временно
+  top: 2000px;
+
+  &--something-wrong {
+    background-color: $color-white;
+    padding-bottom: 36px;
+  }
+
+  &__header {
+    background-color: $color-white;
+    font-size: $font-size-medium;
+    font-weight: bold;
+    margin: 0;
+    padding-bottom: 25px;
+    padding-top: 43px;
+
+    &--something-wrong {
+      padding-top: 40px;
+    }
+
+  }
+
   &__text {
+    background-color: $color-white;
+    line-height: $line-height-medium;
     margin: 0 auto;
-    width: 220px;
+    margin-bottom: 20px;
+    padding: 0 40px;
+    padding-bottom: 37px;
+
+    &--something-wrong {
+      padding: 0 45px;
+      padding-bottom: 5px;
+    }
+
   }
 
   &--show {
     display: block;
   }
 
-  @include outlined;
 }
 
 @media #{$break-medium} {
 
   .modal-form {
     left: 50%;
-    min-height: 345px;
+    padding-bottom: 44px;
     transform: translateX(-50%);
 
+    // TODO: Временно
+    top: 1170px;
+
     &--something-wrong {
+      padding-bottom: 49px;
       width: 400px;
     }
 
@@ -34,14 +69,28 @@
       width: 640px;
     }
 
-    &__text {
+    &__header {
+      font-size: $font-size-extra;
+      padding-bottom: 5px;
+      padding-top: 64px;
 
       &--something-wrong {
-        width: 300px;
+        line-height: $line-height-large;
+        padding: 0 80px;
+        padding-top: 56px;
       }
 
-      &--feedback-sent {
-        width: 420px;
+    }
+
+    &__text {
+      margin-bottom: 45px;
+      padding: 25px 80px;
+      padding-bottom: 34px;
+
+      &--something-wrong {
+        margin-bottom: 34px;
+        padding: 24px 60px;
+        padding-bottom: 0px;
       }
 
     }

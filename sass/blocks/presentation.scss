@@ -1,66 +1,162 @@
 .presentation {
-  margin-bottom: 50px;
+  margin-bottom: 141px;
   position: relative;
 
   &__title {
+    font-size: $font-size-medium;
     margin: 0;
+    margin-bottom: 26px;
   }
 
   &__text {
+    line-height: $line-height-medium;
     margin: 0;
+    margin-bottom: 37px;
+    padding: 0 10px;
   }
 
   &__video {
-    height: 265px;
+    display: flex;
+    flex-direction: column;
+    position: relative;
   }
 
   &__content {
-    // TODO: Временно
-    background-color: lightgrey;
+    background-image: url("../img/video-mobile.jpg");
+    background-repeat: no-repeat;
     min-height: 200px;
   }
 
   &__controls {
     @include container;
-    // TODO: Временно
-    background-color: grey;
-    bottom: 45px;
+    align-items: center;
+    background-color: rgba(0, 0, 0, 0.6);
+    bottom: -65px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    left: 20px;
     min-height: 110px;
-    position: relative;
+    position: absolute;
+
+    &::after {
+      background-color: $bg-color-lightgrey;
+      bottom: -1px;
+      content: "";
+      left: 0;
+      min-height: 66px;
+      position: absolute;
+      width: 100%;
+    }
+
   }
 
   &__control-progress {
-    // TODO: Временно
-    background-color: rgba(0, 0, 0, 0.4);
-    min-height: 45px;
+    position: relative;
+  }
+
+  &__scale {
+    width: 235px;
+  }
+
+  &__bar {
+    border-bottom: 3px solid rgba(255, 255, 255, 0.2);
+  }
+
+  &__toggle {
+    background-color: $color-white;
+    border-radius: 50%;
+    height: 9px;
+    left: 15%;
+    position: absolute;
+    top: 60%;
+    transform: translate(-15%, -50%);
+    width: 9px;
+  }
+
+  &__control {
+
+    &-revert {
+      background-color: #5c6870;
+      height: 20px;
+      margin-left: 10px;
+      margin-right: 104px;
+      width: 16px;
+      z-index: 2;
+    }
+
+    &-subtitle {
+      background-color: #5c6870;
+      height: 20px;
+      width: 32px;
+      z-index: 2;
+    }
+
+    &-fullscreen {
+      background-color: #5c6870;
+      height: 20px;
+      margin-right: 10px;
+      width: 20px;
+      z-index: 2;
+    }
 
   }
 
-  @include outlined;
 }
 
 @media #{$break-medium} {
 
   .presentation {
     @include container;
-    margin-bottom: 40px;
+    margin-bottom: 77px;
 
-    &__video {
-      height: 500px;
+    &__title {
+      font-size: $font-size-extra;
+      margin-bottom: 32px;
+    }
+
+    &__text {
+      margin-bottom: 72px;
     }
 
     &__content {
+      background-size: 648px 500px;
       min-height: 500px;
     }
 
     &__controls {
-      bottom: 93px;
+      bottom: 0;
+      left: 0;
       min-height: 93px;
-      width: 100%;
+
+      &::after {
+        content: none;
+      }
     }
 
-    &__control-progress {
-      background-color: inherit;
+    &__scale {
+      margin-right: 10px;
+      width: 389px;
+    }
+
+    &__toggle {
+      left: 29%;
+      transform: translate(-29%, -50%);
+    }
+
+    &__control {
+
+      &-revert {
+        order: -1;
+        margin: 0;
+        margin-left: 18px;
+        margin-right: 11px;
+      }
+
+      &-fullscreen {
+        margin-right: 26px;
+      }
+
     }
 
   }
@@ -70,8 +166,34 @@
 @media #{$break-large} {
 
   .presentation {
-    margin-bottom: 80px;
+    margin-bottom: 121px;
     width: 800px;
+
+    &__title {
+      margin-bottom: 31px;
+    }
+
+    &__text {
+      margin-bottom: 73px;
+    }
+
+    &__content {
+      background-size: 800px 500px;
+    }
+
+    &__controls {
+      width: 100%;
+    }
+
+    &__scale {
+      width: 540px;
+    }
+
+    &__toggle {
+      left: 21%;
+      transform: translate(-21%, -50%);
+    }
+
   }
 
 }
