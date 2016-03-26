@@ -10,4 +10,22 @@
     margin-right: 0;
   }
 
+  // TODO: Нужен ли отдельный класс?
+  svg {
+    fill: $color-white;
+    // TODO: Выровнять по вертикалии (для себя)
+  }
+
+  &--tw svg {
+    @include size(18px, 14px);
+  }
+
+  &--fb svg {
+    @include size(9px, 16px);
+  }
+
+  &--yt svg {
+    @include size(20px, 14px);
+  }
+
 }

@@ -1,9 +1,19 @@
 .welcome {
+  background-image: url("../img/bg-back-mobile.jpg");
+  background-position: center;
+  background-size: 320px 389px;
   margin-bottom: 38px;
   position: relative;
 
+  @media
+    (min-resolution: 144dpi),
+    (min-resolution: 1.5dppx) {
+      background-image: url("../img/bg-back-mobile@2x.jpg");
+  }
+
   &__image {
-    @include size(320px, 389px);
+    @include size(280px, 389px);
+    margin: 0 auto;
 
     &--inner-page {
       height: 159px;
@@ -41,10 +51,19 @@
 @media #{$break-medium} {
 
   .welcome {
+    background-image: url("../img/bg-back-desktop.jpg");
+    background-position: top;
+    background-size: 768px 518px;
     margin-bottom: 50px;
 
+    @media
+      (min-resolution: 144dpi),
+      (min-resolution: 1.5dppx) {
+        background-image: url("../img/bg-back-desktop@2x.jpg");
+    }
+
     &__image {
-      @include size(768px, 518px);
+      @include size(460px, 518px);
 
       &--inner-page {
         height: 290px;
@@ -88,14 +107,10 @@
 @media #{$break-large} {
 
   .welcome {
+    background-size: 1200px 518px;
 
-    &__image {
-      width: 1200px;
-
-      &--inner-page {
+    &__image--inner-page {
         height: 302px;
-      }
-
     }
 
     &::before {
