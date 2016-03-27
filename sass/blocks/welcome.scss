@@ -1,7 +1,8 @@
 .welcome {
   background-image: url("../img/bg-back-mobile.jpg");
-  background-position: center;
-  background-size: 320px 389px;
+  background-position: 50% 100%;
+  background-repeat: no-repeat;
+  background-size: auto 389px;
   margin-bottom: 38px;
   position: relative;
 
@@ -53,7 +54,7 @@
   .welcome {
     background-image: url("../img/bg-back-desktop.jpg");
     background-position: top;
-    background-size: 768px 518px;
+    background-size: auto 518px;
     margin-bottom: 50px;
 
     @media
@@ -107,7 +108,7 @@
 @media #{$break-large} {
 
   .welcome {
-    background-size: 1200px 518px;
+    background-size: auto 518px;
 
     &__image--inner-page {
         height: 302px;
