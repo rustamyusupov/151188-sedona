@@ -91,8 +91,8 @@
 
       &::after {
         background-color: #e6e6e6;
-        //background-position: center;
-        //background-repeat: no-repeat;
+        background-position: center;
+        background-repeat: no-repeat;
         content: "";
         height: 57px;
         position: absolute;
@@ -193,14 +193,24 @@
     display: flex;
     flex-direction: column;
     margin-bottom: 11px;
+    position: relative;
   }
 
-  &__phone::after {
-    //background-image: url("");
+  &__phone--icon {
+    height: 18px;
+    position: absolute;
+    right: 19px;
+    top: 53px;
+    width: 18px;
   }
 
-  &__email::after {
-    //background-image: url("");
+  &__email--icon {
+    height: 18px;
+    position: absolute;
+    right: 19px;
+    top: 53px;
+    width: 18px;
+    z-index: 2;
   }
 
   &__emotions {
@@ -567,6 +577,16 @@
       flex-wrap: wrap;
       justify-content: flex-start;
       width: 50%;
+    }
+
+    &__phone--icon {
+      right: -11px;
+      top: 53px;
+    }
+
+    &__email--icon {
+      right: -90px;
+      top: 19px;
     }
 
     &__emotions {

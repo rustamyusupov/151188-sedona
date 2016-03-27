@@ -36,9 +36,9 @@
     padding-left: 36px;
     position: relative;
 
-    &::before {
-      /* background-image: ; */
-      background-color: #b2b2b2;
+    // TODO: Нужен ли класс?
+    svg {
+      fill: #b2b2b2;
       content: "";
       height: 22px;
       left: 0;
@@ -93,7 +93,7 @@
       padding-top: 13px;
       width: 33px;
 
-      &::before {
+      svg {
         left: 2px;
         top: 11px;
       }
@@ -144,6 +144,11 @@
 
     &__likes {
       padding-right: 20px;
+
+      svg {
+        fill: $color-white;
+      }
+
     }
 
   }

@@ -13,11 +13,12 @@
   }
 
   &__image {
+    // TODO: Поднять надпись выше
     @include size(280px, 389px);
     margin: 0 auto;
 
     &--inner-page {
-      height: 159px;
+      @include size(230px, 159px);
     }
 
   }
@@ -53,7 +54,6 @@
 
   .welcome {
     background-image: url("../img/bg-back-desktop.jpg");
-    background-position: top;
     background-size: auto 518px;
     margin-bottom: 50px;
 
