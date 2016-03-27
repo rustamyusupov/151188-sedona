@@ -155,9 +155,9 @@
       width: 22px;
   }
 
+  // TODO: Как здесь инлайновый svg использовать?
   &__field--places:checked + &__caption--places::after {
-    //background-image: url("");
-    background-color: black;
+    background-image: url("../img/icon-tick.svg");
     content: "";
     display: block;
     height: 16px;
