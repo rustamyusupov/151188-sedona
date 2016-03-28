@@ -10,22 +10,21 @@
     margin-right: 0;
   }
 
-  // TODO: Нужен ли отдельный класс?
-  svg {
+  &__icon {
     fill: $color-white;
   }
 
-  &--tw svg {
+  &--tw &__icon {
     @include size(18px, 14px);
     margin-top: 17px;
   }
 
-  &--fb svg {
+  &--fb &__icon {
     @include size(9px, 18px);
     margin-top: 14px;
   }
 
-  &--yt svg {
+  &--yt &__icon {
     @include size(20px, 14px);
     margin-top: 17px;
   }

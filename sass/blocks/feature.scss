@@ -62,8 +62,7 @@
     text-align: left;
   }
 
-  // TODO: Можно ли такой селектор или необходимо svg давать класс?
-  &--icon-home svg {
+  &--icon-home &__icon {
     height: 36px;
     left: 22px;
     position: absolute;
@@ -71,7 +70,7 @@
     width: 37px;
   }
 
-  &--icon-souvenirs svg {
+  &--icon-souvenirs &__icon {
     height: 37px;
     left: 25px;
     position: absolute;
@@ -79,7 +78,7 @@
     width: 32px;
   }
 
-  &--icon-food svg {
+  &--icon-food &__icon {
     height: 34px;
     left: 19px;
     position: absolute;
@@ -144,14 +143,14 @@
       text-align: center;
     }
 
-    &--icon-home svg {
+    &--icon-home &__icon {
       height: 72px;
       left: 90px;
       top: 25px;
       width: 75px;
     }
 
-    &--icon-food svg {
+    &--icon-food &__icon {
       height: 68px;
       left: 91px;
       top: 28px;
@@ -160,14 +159,13 @@
 
     &--icon-souvenirs {
       order: 1;
+    }
 
-      svg {
-        height: 75px;
-        left: 100px;
-        top: 22px;
-        width: 64px;
-      }
-
+    &--icon-souvenirs &__icon {
+      height: 75px;
+      left: 100px;
+      top: 22px;
+      width: 64px;
     }
 
     &--icon &__title {
@@ -215,18 +213,13 @@
       padding-top: 122px;
     }
 
-    &--icon-home svg,
-    &--icon-food svg {
+    &--icon-home &__icon,
+    &--icon-food &__icon {
       left: 162px;
     }
 
-    &--icon-souvenirs {
-      order: 1;
-
-      svg {
-        left: 168px;
-      }
-
+    &--icon-souvenirs  &__icon {
+      left: 168px;
     }
 
     &--icon &__title {

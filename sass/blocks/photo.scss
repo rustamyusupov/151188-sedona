@@ -36,19 +36,17 @@
     font-weight: bold;
     padding-left: 36px;
     position: relative;
-
-    // TODO: Нужен ли класс?
-    svg {
-      fill: #b2b2b2;
-      content: "";
-      height: 22px;
-      left: 0;
-      position: absolute;
-      top: -3px;
-      width: 24px;
-    }
-
   }
+
+  &__icon {
+    fill: #b2b2b2;
+    height: 22px;
+    left: 0;
+    position: absolute;
+    top: -3px;
+    width: 24px;
+  }
+
 
   &:last-child::after {
     border-top: 1px solid $color-border;
@@ -93,12 +91,11 @@
       align-self: flex-end;
       padding-top: 13px;
       width: 33px;
+    }
 
-      svg {
-        left: 2px;
-        top: 11px;
-      }
-
+    &__icon {
+      left: 2px;
+      top: 11px;
     }
 
     &:first-child {
@@ -145,11 +142,10 @@
 
     &__likes {
       padding-right: 20px;
+    }
 
-      svg {
-        fill: $color-white;
-      }
-
+    &__icon {
+      fill: $color-white;
     }
 
   }

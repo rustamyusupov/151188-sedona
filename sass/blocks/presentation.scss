@@ -83,48 +83,40 @@
     width: 9px;
   }
 
-  &__control {
+  &__control-revert {
+    height: 20px;
+    margin-left: 10px;
+    margin-right: 104px;
+    width: 16px;
+    z-index: 2;
+  }
 
-    &-revert {
-      height: 20px;
-      margin-left: 10px;
-      margin-right: 104px;
-      width: 16px;
-      z-index: 2;
+  &__control-revert &__control-icon {
+    height: 20px;
+    width: 16px;
+  }
 
-      // TODO: Можно ли так или нужен класс?
-      svg {
-        height: 20px;
-        width: 16px;
-      }
+  &__control-subtitle {
+    height: 20px;
+    width: 32px;
+    z-index: 2;
+  }
 
-    }
+  &__control-subtitle &__control-icon {
+    height: 20px;
+    width: 32px;
+  }
 
-    &-subtitle {
-      height: 20px;
-      width: 32px;
-      z-index: 2;
+  &__control-fullscreen {
+    height: 20px;
+    margin-right: 10px;
+    width: 20px;
+    z-index: 2;
+  }
 
-      svg {
-        height: 20px;
-        width: 32px;
-      }
-
-    }
-
-    &-fullscreen {
-      height: 20px;
-      margin-right: 10px;
-      width: 20px;
-      z-index: 2;
-
-      svg {
-        height: 20px;
-        width: 20px;
-      }
-
-    }
-
+  &__control-fullscreen &__control-icon {
+    height: 20px;
+    width: 20px;
   }
 
 }
