@@ -1,15 +1,7 @@
 .social {
   display: flex;
   justify-content: center;
-  margin-bottom: 40px;
-}
-
-@media #{$break-medium} {
-
-  .social {
-    margin-right: 10px;
-  }
-
+  margin-bottom: 36px;
 }
 
 @media #{$break-large} {
