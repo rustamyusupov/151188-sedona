@@ -4,8 +4,15 @@
   background-position: 50% 100%;
   background-repeat: no-repeat;
   background-size: auto 389px;
+  display: flex;
+  justify-content: center;
   margin-bottom: 38px;
+  min-height: 389px;
   position: relative;
+
+  &--inner-page {
+    min-height: 159px;
+  }
 
   @media
     (min-resolution: 144dpi),
@@ -14,12 +21,16 @@
   }
 
   &__image {
-    // TODO: Поднять надпись выше
-    @include size(280px, 389px);
-    margin: 0 auto;
+    align-self: center;
+    margin-top: 5px;
+    width: 280px;
 
     &--inner-page {
-      @include size(230px, 159px);
+      align-self: flex-start;
+      height: auto;
+      margin: 0;
+      margin-top: 52px;
+      width: 230px;
     }
 
   }
@@ -57,6 +68,11 @@
     background-image: url("../img/bg-back-desktop.jpg");
     background-size: auto 518px;
     margin-bottom: 50px;
+    min-height: 518px;
+
+    &--inner-page {
+      min-height: 290px;
+    }
 
     @media
       (min-resolution: 144dpi),
@@ -65,10 +81,12 @@
     }
 
     &__image {
-      @include size(460px, 518px);
+      align-self: flex-start;
+      margin-top: 77px;
+      width: 460px;
 
       &--inner-page {
-        height: 290px;
+        margin-top: 93px;
       }
 
     }
@@ -111,8 +129,12 @@
   .welcome {
     background-size: auto 518px;
 
+    &--inner-page {
+      min-height: 301px;
+    }
+
     &__image--inner-page {
-        height: 302px;
+      margin-top: 101px;
     }
 
     &::before {

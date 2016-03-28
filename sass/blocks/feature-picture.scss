@@ -1,24 +1,16 @@
 .feature-picture {
   background-color: #e0ecf8;
+  display: flex;
+  justify-content: center;
   overflow: hidden;
-  // TODO: Как сделать так, чтобы не задавать конкретные размеры?
   width: 320px;
-
-  &__image {
-    // TODO: Можно ли так кадрировать?
-    margin-left: -100px;
-  }
 
 }
 
 @media #{$break-medium} {
 
   .feature-picture {
-    width: 512px;
-
-    &__image {
-      margin: 0;
-    }
+    @include size(512px, 256px);
 
   }
 
@@ -27,12 +19,11 @@
 @media #{$break-large} {
 
   .feature-picture {
-    height: 256px;
     width: 800px;
 
     &__image {
       @include size(unset, unset);
-      margin-top: -70px;
+      align-self: center;
     }
 
   }

@@ -207,8 +207,8 @@
   &__email--icon {
     height: 18px;
     position: absolute;
-    right: 19px;
-    top: 53px;
+    right: 20px;
+    top: 54px;
     width: 18px;
     z-index: 2;
   }
@@ -427,6 +427,10 @@
       margin-bottom: 26px;
     }
 
+    &__email--icon {
+      top: 52px;
+    }
+
     &__field--contacts {
       order: 3;
       width: 100%;
@@ -585,8 +589,8 @@
     }
 
     &__email--icon {
-      right: -90px;
-      top: 19px;
+      right: -91px;
+      top: 20px;
     }
 
     &__emotions {
