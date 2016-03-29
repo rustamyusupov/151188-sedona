@@ -26,8 +26,24 @@
     padding: 7px 0;
     text-decoration: none;
 
+    &:hover {
+      background-color: $bg-color-hover;
+    }
+
+    &:active {
+      background-color: $bg-color-active;
+      color: $color-active;
+    }
+
     &--active {
       cursor: default;
+
+      &:hover,
+      &:active {
+        background-color: $bg-color-base;
+        color: $color-white;
+      }
+
     }
 
   }
@@ -81,6 +97,28 @@
       border: none;
       color: $color-base;
       padding: 14px 0;
+
+      &:hover {
+        background: none;
+        color: $color-hover;
+      }
+
+      &:active {
+        background: none;
+        color: $color-active-menu;
+      }
+
+      &--active {
+        cursor: default;
+
+        &:hover,
+        &:active {
+          background: none;
+          color: $color-base;
+        }
+
+      }
+
     }
 
   }
