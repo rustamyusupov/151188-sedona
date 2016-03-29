@@ -65,6 +65,7 @@
   }
 
   &__scale {
+    cursor: pointer;
     width: 235px;
   }
 
@@ -75,6 +76,7 @@
   &__toggle {
     background-color: $color-white;
     border-radius: 50%;
+    cursor: pointer;
     height: 9px;
     left: 15%;
     position: absolute;
@@ -84,11 +86,22 @@
   }
 
   &__control-revert {
+    cursor: pointer;
+    fill: #5c6870;
     height: 20px;
     margin-left: 10px;
     margin-right: 104px;
     width: 16px;
     z-index: 2;
+
+    &:hover {
+      fill: $color-hover-controls;
+    }
+
+    &:active {
+      fill: $color-active-controls;
+    }
+
   }
 
   &__control-revert &__control-icon {
@@ -97,9 +110,20 @@
   }
 
   &__control-subtitle {
+    cursor: pointer;
+    fill: #5c6870;
     height: 20px;
     width: 32px;
     z-index: 2;
+
+    &:hover {
+      fill: $color-hover-controls;
+    }
+
+    &:active {
+      fill: $color-active-controls;
+    }
+
   }
 
   &__control-subtitle &__control-icon {
@@ -108,10 +132,21 @@
   }
 
   &__control-fullscreen {
+    cursor: pointer;
+    fill: #5c6870;
     height: 20px;
     margin-right: 10px;
     width: 20px;
     z-index: 2;
+
+    &:hover {
+      fill: $color-hover-controls;
+    }
+
+    &:active {
+      fill: $color-active-controls;
+    }
+
   }
 
   &__control-fullscreen &__control-icon {
@@ -169,25 +204,21 @@
       transform: translate(-29%, -50%);
     }
 
-    &__control {
+    &__control-revert {
+      fill: $color-white;
+      margin: 0;
+      margin-left: 18px;
+      margin-right: 11px;
+      order: -1;
+    }
 
-      &-revert {
-        fill: $color-white;
-        margin: 0;
-        margin-left: 18px;
-        margin-right: 11px;
-        order: -1;
-      }
+    &__control-subtitle {
+      fill: $color-white;
+    }
 
-      &-subtitle {
-        fill: $color-white;
-      }
-
-      &-fullscreen {
-        fill: $color-white;
-        margin-right: 26px;
-      }
-
+    &__control-fullscreen {
+      fill: $color-white;
+      margin-right: 26px;
     }
 
   }

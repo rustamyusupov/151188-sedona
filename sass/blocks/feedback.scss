@@ -74,6 +74,14 @@
         width: 56px;
       }
 
+      &:hover::before {
+        background-color: $color-hover-input;
+      }
+
+      &:active::before {
+        background-color: $color-active-input;
+      }
+
     }
 
     &--impression::before {
@@ -133,6 +141,20 @@
       width: 100%;
     }
 
+    &--introduce,
+    &--contacts {
+
+      &:hover {
+        background-color: $color-hover-input;
+      }
+
+      &:focus {
+        background-color: $color-white;
+        outline: 4px solid $color-border;
+      }
+
+    }
+
     &--impression,
     &--places {
       display: none;
@@ -145,17 +167,20 @@
   }
 
   &__field--impression:checked + &__caption--impression::after {
-      background-color: #333333;
-      border-radius: 50%;
-      content: "";
-      height: 22px;
-      left: 17px;
-      position: absolute;
-      top: 3px;
-      width: 22px;
+    background-color: #333333;
+    border-radius: 50%;
+    content: "";
+    height: 22px;
+    left: 17px;
+    position: absolute;
+    top: 3px;
+    width: 22px;
   }
 
-  // TODO: Как здесь инлайновый svg использовать?
+  &__field--impression:checked + &__caption--impression:active::after {
+    background-color: #a4a4a4;
+  }
+
   &__field--places:checked + &__caption--places::after {
     background-image: url("../img/icon-tick.svg");
     content: "";
@@ -165,6 +190,10 @@
     position: absolute;
     top: 6px;
     width: 24px;
+  }
+
+  &__field--places:checked + &__caption--places:active::after {
+    background-image: url("../img/icon-tick-active.svg");
   }
 
   &__list {
@@ -205,11 +234,11 @@
   }
 
   &__email--icon {
-    height: 18px;
+    height: 16px;
     position: absolute;
     right: 20px;
     top: 54px;
-    width: 18px;
+    width: 16px;
     z-index: 2;
   }
 
@@ -428,7 +457,9 @@
     }
 
     &__email--icon {
+      height: 16px;
       top: 52px;
+      width: 16px;
     }
 
     &__field--contacts {
@@ -584,13 +615,15 @@
     }
 
     &__phone--icon {
-      right: -11px;
-      top: 53px;
+      height: 18px;
+      left: 363px;
+      width: 18px;
     }
 
     &__email--icon {
-      right: -91px;
+      height: 16px;
       top: 20px;
+      width: 16px;
     }
 
     &__emotions {
