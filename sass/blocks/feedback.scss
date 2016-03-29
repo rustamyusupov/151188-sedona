@@ -91,8 +91,8 @@
 
       &::after {
         background-color: #e6e6e6;
-        //background-position: center;
-        //background-repeat: no-repeat;
+        background-position: center;
+        background-repeat: no-repeat;
         content: "";
         height: 57px;
         position: absolute;
@@ -155,9 +155,9 @@
       width: 22px;
   }
 
+  // TODO: Как здесь инлайновый svg использовать?
   &__field--places:checked + &__caption--places::after {
-    //background-image: url("");
-    background-color: black;
+    background-image: url("../img/icon-tick.svg");
     content: "";
     display: block;
     height: 16px;
@@ -193,14 +193,24 @@
     display: flex;
     flex-direction: column;
     margin-bottom: 11px;
+    position: relative;
   }
 
-  &__phone::after {
-    //background-image: url("");
+  &__phone--icon {
+    height: 18px;
+    position: absolute;
+    right: 19px;
+    top: 53px;
+    width: 18px;
   }
 
-  &__email::after {
-    //background-image: url("");
+  &__email--icon {
+    height: 18px;
+    position: absolute;
+    right: 20px;
+    top: 54px;
+    width: 18px;
+    z-index: 2;
   }
 
   &__emotions {
@@ -417,6 +427,10 @@
       margin-bottom: 26px;
     }
 
+    &__email--icon {
+      top: 52px;
+    }
+
     &__field--contacts {
       order: 3;
       width: 100%;
@@ -567,6 +581,16 @@
       flex-wrap: wrap;
       justify-content: flex-start;
       width: 50%;
+    }
+
+    &__phone--icon {
+      right: -11px;
+      top: 53px;
+    }
+
+    &__email--icon {
+      right: -91px;
+      top: 20px;
     }
 
     &__emotions {

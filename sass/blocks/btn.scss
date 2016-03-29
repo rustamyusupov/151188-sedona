@@ -11,6 +11,42 @@
   text-decoration: none;
   text-transform: uppercase;
 
+  &:hover {
+    background-color: $bg-color-hover;
+  }
+
+  &:active {
+    background-color: $bg-color-active;
+    color: $color-active;
+  }
+
+  &--disabled {
+    background-color: $bg-color-disabled;
+    color: $color-white;
+
+    &:hover,
+    &:active {
+      background-color: $bg-color-disabled;
+      color: $color-white;
+      cursor: default;
+    }
+
+  }
+
+  &--in-progress {
+    animation-iteration-count: infinite;
+    animation-name: change-color;
+    animation-duration: 1s;
+    cursor: default;
+
+    &:hover,
+    &:active {
+      color: $color-white;
+      cursor: default;
+    }
+
+  }
+
   &--feedback-sent {
     font-size: $font-size-medium;
     padding: 16px 76px;
@@ -19,6 +55,20 @@
   &--something-wrong {
     font-size: $font-size-medium;
     padding: 16px 79px;
+  }
+
+}
+
+@keyframes change-color {
+
+  0% {
+    background-color: #5496bd;
+  }
+  50% {
+    background-color: #3e84ae;
+  }
+  100% {
+    background-color: #5496bd;
   }
 
 }

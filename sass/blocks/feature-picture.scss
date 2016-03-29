@@ -1,24 +1,31 @@
 .feature-picture {
-  background-color: $color-white;
-
-  &__image {
-    @include size(320px, 260px);
-  }
+  background-color: #e0ecf8;
+  display: flex;
+  justify-content: center;
+  overflow: hidden;
+  width: 320px;
 
 }
 
 @media #{$break-medium} {
 
-  .feature-picture__image {
+  .feature-picture {
     @include size(512px, 256px);
+
   }
 
 }
 
 @media #{$break-large} {
 
-  .feature-picture__image {
+  .feature-picture {
     width: 800px;
+
+    &__image {
+      @include size(unset, unset);
+      align-self: center;
+    }
+
   }
 
 }

@@ -1,12 +1,36 @@
 .welcome {
+  background-color: #dbe9f2;
+  background-image: url("../img/bg-back-mobile.jpg");
+  background-position: 50% 100%;
+  background-repeat: no-repeat;
+  background-size: auto 389px;
+  display: flex;
+  justify-content: center;
   margin-bottom: 38px;
+  min-height: 389px;
   position: relative;
 
+  &--inner-page {
+    min-height: 159px;
+  }
+
+  @media
+    (min-resolution: 144dpi),
+    (min-resolution: 1.5dppx) {
+      background-image: url("../img/bg-back-mobile@2x.jpg");
+  }
+
   &__image {
-    @include size(320px, 389px);
+    align-self: center;
+    margin-top: 5px;
+    width: 280px;
 
     &--inner-page {
-      height: 159px;
+      align-self: flex-start;
+      height: auto;
+      margin: 0;
+      margin-top: 52px;
+      width: 230px;
     }
 
   }
@@ -41,13 +65,28 @@
 @media #{$break-medium} {
 
   .welcome {
+    background-image: url("../img/bg-back-desktop.jpg");
+    background-size: auto 518px;
     margin-bottom: 50px;
+    min-height: 518px;
+
+    &--inner-page {
+      min-height: 290px;
+    }
+
+    @media
+      (min-resolution: 144dpi),
+      (min-resolution: 1.5dppx) {
+        background-image: url("../img/bg-back-desktop@2x.jpg");
+    }
 
     &__image {
-      @include size(768px, 518px);
+      align-self: flex-start;
+      margin-top: 77px;
+      width: 460px;
 
       &--inner-page {
-        height: 290px;
+        margin-top: 93px;
       }
 
     }
@@ -88,14 +127,14 @@
 @media #{$break-large} {
 
   .welcome {
+    background-size: auto 518px;
 
-    &__image {
-      width: 1200px;
+    &--inner-page {
+      min-height: 301px;
+    }
 
-      &--inner-page {
-        height: 302px;
-      }
-
+    &__image--inner-page {
+      margin-top: 101px;
     }
 
     &::before {

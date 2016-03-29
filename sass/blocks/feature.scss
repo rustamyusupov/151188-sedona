@@ -54,37 +54,34 @@
   &--icon {
     background-color: $color-white;
     color: $color-base;
+    fill: $bg-color-base;
     margin-bottom: 28px;
     padding: 0;
     padding-left: 70px;
     position: relative;
     text-align: left;
-
-    &::before {
-      content: "";
-      background-color: $bg-color-base;
-      position: absolute;
-    }
-
   }
 
-  &--icon-home::before {
+  &--icon-home &__icon {
     height: 36px;
     left: 22px;
+    position: absolute;
     top: -9px;
     width: 37px;
   }
 
-  &--icon-souvenirs::before {
+  &--icon-souvenirs &__icon {
     height: 37px;
     left: 25px;
+    position: absolute;
     top: -11px;
     width: 32px;
   }
 
-  &--icon-food::before {
+  &--icon-food &__icon {
     height: 34px;
     left: 19px;
+    position: absolute;
     top: -4px;
     width: 38px;
   }
@@ -146,14 +143,14 @@
       text-align: center;
     }
 
-    &--icon-home::before {
+    &--icon-home &__icon {
       height: 72px;
       left: 90px;
       top: 25px;
       width: 75px;
     }
 
-    &--icon-food::before {
+    &--icon-food &__icon {
       height: 68px;
       left: 91px;
       top: 28px;
@@ -162,14 +159,13 @@
 
     &--icon-souvenirs {
       order: 1;
+    }
 
-      &::before {
-        height: 75px;
-        left: 100px;
-        top: 22px;
-        width: 64px;
-      }
-
+    &--icon-souvenirs &__icon {
+      height: 75px;
+      left: 100px;
+      top: 22px;
+      width: 64px;
     }
 
     &--icon &__title {
@@ -217,18 +213,13 @@
       padding-top: 122px;
     }
 
-    &--icon-home::before,
-    &--icon-food::before {
+    &--icon-home &__icon,
+    &--icon-food &__icon {
       left: 162px;
     }
 
-    &--icon-souvenirs {
-      order: 1;
-
-      &::before {
-        left: 168px;
-      }
-
+    &--icon-souvenirs  &__icon {
+      left: 168px;
     }
 
     &--icon &__title {

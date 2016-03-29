@@ -6,11 +6,13 @@
 
   &__title {
     margin: 0;
-    margin-right: 10px
+    margin-left: 8px;
   }
 
   &__image {
-    @include size(27px, 34px);
+    @include size(42px);
+    fill: $color-base;
+    margin-left: 5px;
   }
 
 }
@@ -19,13 +21,18 @@
 
   .copyright {
     align-items: flex-start;
-    margin-right: 3px;
     margin-top: 5px;
 
     &__title {
-      padding-right: 4px;
+      margin-left: 15px;
       margin-top: 4px;
     }
+
+    &__image {
+      padding: 0;
+      margin-left: 5px;
+    }
+
   }
 
 }
@@ -33,10 +40,10 @@
 @media #{$break-large} {
 
   .copyright {
-    margin-right: 45px;
+    margin-right: 35px;
 
     &__title {
-      padding-right: 0;
+      margin-right: 0;
     }
 
   }

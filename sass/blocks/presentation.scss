@@ -22,9 +22,18 @@
   }
 
   &__content {
+    background-color: #c69d96;
     background-image: url("../img/video-mobile.jpg");
     background-repeat: no-repeat;
+    background-size: 320px 200px;
     min-height: 200px;
+
+    @media
+      (min-resolution: 144dpi),
+      (min-resolution: 1.5dppx) {
+        background-image: url("../img/video-mobile@2x.jpg");
+    }
+
   }
 
   &__controls {
@@ -74,32 +83,40 @@
     width: 9px;
   }
 
-  &__control {
+  &__control-revert {
+    height: 20px;
+    margin-left: 10px;
+    margin-right: 104px;
+    width: 16px;
+    z-index: 2;
+  }
 
-    &-revert {
-      background-color: #5c6870;
-      height: 20px;
-      margin-left: 10px;
-      margin-right: 104px;
-      width: 16px;
-      z-index: 2;
-    }
+  &__control-revert &__control-icon {
+    height: 20px;
+    width: 16px;
+  }
 
-    &-subtitle {
-      background-color: #5c6870;
-      height: 20px;
-      width: 32px;
-      z-index: 2;
-    }
+  &__control-subtitle {
+    height: 20px;
+    width: 32px;
+    z-index: 2;
+  }
 
-    &-fullscreen {
-      background-color: #5c6870;
-      height: 20px;
-      margin-right: 10px;
-      width: 20px;
-      z-index: 2;
-    }
+  &__control-subtitle &__control-icon {
+    height: 20px;
+    width: 32px;
+  }
 
+  &__control-fullscreen {
+    height: 20px;
+    margin-right: 10px;
+    width: 20px;
+    z-index: 2;
+  }
+
+  &__control-fullscreen &__control-icon {
+    height: 20px;
+    width: 20px;
   }
 
 }
@@ -120,8 +137,16 @@
     }
 
     &__content {
+      background-image: url("../img/video-tablet.jpg");
       background-size: 648px 500px;
       min-height: 500px;
+
+      @media
+        (min-resolution: 144dpi),
+        (min-resolution: 1.5dppx) {
+          background-image: url("../img/video-tablet@2x.jpg");
+      }
+
     }
 
     &__controls {
@@ -147,13 +172,19 @@
     &__control {
 
       &-revert {
-        order: -1;
+        fill: $color-white;
         margin: 0;
         margin-left: 18px;
         margin-right: 11px;
+        order: -1;
+      }
+
+      &-subtitle {
+        fill: $color-white;
       }
 
       &-fullscreen {
+        fill: $color-white;
         margin-right: 26px;
       }
 
@@ -178,7 +209,15 @@
     }
 
     &__content {
+      background-image: url("../img/video-desktop.jpg");
       background-size: 800px 500px;
+
+      @media
+        (min-resolution: 144dpi),
+        (min-resolution: 1.5dppx) {
+          background-image: url("../img/video-desktop@2x.jpg");
+      }
+
     }
 
     &__controls {

@@ -8,7 +8,6 @@
     @include size(102px, 83px);
   }
 
-  @include outlined;
 }
 
 @media #{$break-medium} {
