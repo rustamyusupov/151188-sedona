@@ -102,7 +102,7 @@
         background-position: center;
         background-repeat: no-repeat;
         content: "";
-        height: 57px;
+        height: 58px;
         position: absolute;
         right: 0;
         top: 33px;
@@ -130,6 +130,7 @@
     border: none;
     font-size: $font-size-medium;
     font-weight: bold;
+    height: 26px;
     line-height: $line-height-base;
     padding: 16px 22px;
 
@@ -554,8 +555,8 @@
         order: 2;
 
         &::after {
-          left: 341px;
-          top: -16px;
+          left: 342px;
+          top: -17px;
         }
 
       }
