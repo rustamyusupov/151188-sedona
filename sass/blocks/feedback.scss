@@ -365,11 +365,13 @@
         display: inline-block;
         margin-bottom: 26px;
         padding: 0 62px;
+        vertical-align: middle;
       }
 
       &--places .feedback__header {
         display: inline-block;
         margin-bottom: 28px;
+        vertical-align: middle;
         width: 401px;
       }
 
@@ -377,6 +379,7 @@
         display: inline-block;
         margin-bottom: 59px;
         padding: 0 76px;
+        vertical-align: middle;
       }
 
     }
