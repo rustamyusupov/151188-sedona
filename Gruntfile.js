@@ -22,10 +22,15 @@ module.exports = function(grunt) {
           dest: "build"
         }]
       },
-      html: {
+      watch: {
         files: [{
           expand: true,
-          src: ["*.html"],
+          src: [
+            "fonts/**/*.{woff,woff2}",
+            "img/**/*.{png,jpg,gif,svg}",
+            "js/**/*.js",
+            "*.html"
+          ],
           dest: "build"
         }]
       }
@@ -49,10 +54,6 @@ module.exports = function(grunt) {
             "last 2 Opera versions",
             "last 2 Edge versions"
           ]})
-          // ,
-          // require("css-mqpacker")({
-          //   sort: true
-          // })
         ]
       },
       style: {
@@ -78,7 +79,7 @@ module.exports = function(grunt) {
         },
         files: [{
           expand: true,
-          src: ["build/img/**/*.{png,jpg,gif}"]
+          src: ["build/img/**/*.{png,jpg,gif,svg}"]
         }]
       }
     },
@@ -102,9 +103,14 @@ module.exports = function(grunt) {
     },
 
     watch: {
-      html: {
-        files: ["*.html"],
-        tasks: ["copy:html"],
+      files: {
+        files: [
+          "fonts/**/*.{woff,woff2}",
+          "img/**/*.{png,jpg,gif,svg}",
+          "js/**/*.js",
+          "*.html"
+        ],
+        tasks: ["copy:watch"],
         options: {spawn: false}
       },
       style: {
