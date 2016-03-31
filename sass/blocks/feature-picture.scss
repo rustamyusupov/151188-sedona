@@ -22,7 +22,7 @@
     width: 800px;
 
     &__image {
-      @include size(unset, unset);
+      @include size(auto, auto);
       align-self: center;
     }
 
