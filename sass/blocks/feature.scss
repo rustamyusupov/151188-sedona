@@ -1,7 +1,7 @@
 .feature {
   color: $color-white;
   padding-top: 40px;
-  padding-bottom: 26px;
+  padding-bottom: 25px;
 
   &__title {
     display: block;
@@ -24,7 +24,7 @@
     background-color: $bg-color-grey;
     color: $color-base;
     padding: 0 20px;
-    padding-bottom: 14px;
+    padding-bottom: 13px;
     padding-top: 27px;
     position: relative;
 
@@ -119,7 +119,7 @@
     &--bg-grey {
       padding: 0;
       padding-bottom: 23px;
-      padding-top: 43px;
+      padding-top: 45px;
 
       &::after {
         content: none;
@@ -128,10 +128,11 @@
     }
 
     &--bg-grey &__title {
-      margin-bottom: 13px;
+      margin-bottom: 11px;
     }
 
     &--bg-grey &__text {
+      margin-bottom: 20px;
       padding: 0 54px;
       word-wrap: break-word;
     }
@@ -139,7 +140,7 @@
     &--icon {
       margin-bottom: 52px;
       padding: 0 49px;
-      padding-top: 121px;
+      padding-top: 124px;
       text-align: center;
     }
 
@@ -169,7 +170,7 @@
     }
 
     &--icon &__title {
-      margin-bottom: 23px;
+      margin-bottom: 21px;
       padding: 0 30px;
     }
 
@@ -201,7 +202,7 @@
 
     &--bg-grey {
       margin-bottom: 1px;
-      padding: 43px 20px;
+      padding: 45px 20px;
     }
 
     &--bg-grey &__text {
@@ -210,7 +211,7 @@
 
     &--icon {
       margin-bottom: 40px;
-      padding-top: 122px;
+      padding-top: 123px;
     }
 
     &--icon-home &__icon,

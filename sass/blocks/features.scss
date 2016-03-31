@@ -5,14 +5,14 @@
   &__header {
     @include container;
 
-    margin-bottom: 26px;
+    margin-bottom: 25px;
   }
 
   &__title {
     font-size: $font-size-medium;
     font-weight: bold;
     margin: 0;
-    margin-bottom: 29px;
+    margin-bottom: 26px;
   }
 
   &__text {
@@ -24,11 +24,11 @@
     flex-direction: column;
 
     &--first  {
-      margin-bottom: 36px;
+      margin-bottom: 35px;
       position: relative;
 
       .feature {
-        padding-top: 57px;
+        padding-top: 58px;
       }
 
       &::after {
@@ -58,7 +58,7 @@
     }
 
     &:nth-of-type(2)  {
-      margin-bottom: 10px;
+      margin-bottom: 9px;
     }
 
   }
@@ -70,12 +70,13 @@
   .features {
 
     &__header {
-      padding-bottom: 25px;
+      margin-bottom: 50px;
       width: 550px;
     }
 
     &__title {
       font-size: $font-size-large;
+      margin-bottom: 28px;
     }
 
     &__text {
