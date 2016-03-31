@@ -48,11 +48,11 @@ module.exports = function(grunt) {
       options: {
         processors: [
           require("autoprefixer")({browsers: [
-            "last 1 version",
-            "last 2 Chrome versions",
-            "last 2 Firefox versions",
-            "last 2 Opera versions",
-            "last 2 Edge versions"
+            "last 3 versions",
+            "last 3 Chrome versions",
+            "last 3 Firefox versions",
+            "last 3 Opera versions",
+            "last 3 Edge versions"
           ]})
         ]
       },
