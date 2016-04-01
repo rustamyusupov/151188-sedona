@@ -13,6 +13,25 @@
     width: 23px;
     z-index: 2;
 
+    &::before,
+    &::after {
+      background-color: #ffffff;
+      content: "";
+      height: 4px;
+      position: absolute;
+      width: 28px;
+      right: -3px;
+      top: 9px;
+    }
+
+    &::before {
+      transform: rotate(45deg);
+    }
+
+    &::after {
+      transform: rotate(-45deg);
+    }
+
     &--closed::before {
       background-color: #81b3d2;
       box-shadow: 0 8px 0 0 #81b3d2,
@@ -23,25 +42,12 @@
       right: 0;
       top: 0;
       width: 23px;
+      transform: none;
     }
 
-    &--opened::before,
-    &--opened::after {
-      background-color: #ffffff;
-      content: "";
-      height: 4px;
-      position: absolute;
-      width: 28px;
-      right: -3px;
-      top: 9px;
-    }
-
-    &--opened::before {
-      transform: rotate(45deg);
-    }
-
-    &--opened::after {
-      transform: rotate(-45deg);
+    &--closed::after {
+      content: none;
+      transform: none;
     }
 
   }
