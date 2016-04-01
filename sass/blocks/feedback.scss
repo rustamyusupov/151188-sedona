@@ -571,6 +571,10 @@
         width: 100%;
       }
 
+      .feedback__email &--error {
+        margin-left: 183px;
+      }
+
       &--contact-phone {
         display: none;
       }
@@ -619,6 +623,7 @@
     &__phone--icon {
       height: 18px;
       left: 363px;
+      bottom: 20px; // TODO: Относительно чего их позиционировать, чтобы при появлении ошибки, они сдвигались совместно с их блоком?
       width: 18px;
     }
 
