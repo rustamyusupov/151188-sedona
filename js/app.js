@@ -64,20 +64,17 @@ function validateForm() {
 }
 
 function initMap() {
-  var googleMap;
-
-  var mapLatLng = new google.maps.LatLng(34.90401, -111.76367);
-
+  var positionSedona = new google.maps.LatLng(34.86973, -111.76098);
   var mapOptions = {
-    center: mapLatLng,
+    center: positionSedona,
     zoom: 7
   }
 
-  googleMap = new google.maps.Map(map, mapOptions);
+  var googleMap = new google.maps.Map(map, mapOptions);
 
   var mapMarker = new google.maps.Marker({
-    position: mapLatLng,
-    map: googleMap
+    map: googleMap,
+    position: positionSedona
   });
 
 }
