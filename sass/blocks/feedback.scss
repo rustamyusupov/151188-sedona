@@ -227,21 +227,12 @@
     position: relative;
   }
 
-  &__phone--icon {
-    height: 18px;
-    position: absolute;
-    right: 19px;
-    top: 53px;
-    width: 18px;
+  &__phone &__caption::after {
+    background-image: url("../img/icon-phone.svg");
   }
 
-  &__email--icon {
-    height: 16px;
-    position: absolute;
-    right: 20px;
-    top: 54px;
-    width: 16px;
-    z-index: 2;
+  &__email &__caption::after {
+    background-image: url("../img/icon-mail.svg");
   }
 
   &__emotions {
@@ -622,19 +613,8 @@
       flex-wrap: wrap;
       justify-content: flex-start;
       width: 50%;
-    }
 
-    &__phone--icon {
-      height: 18px;
-      left: 363px;
-      bottom: 20px; // TODO: Относительно чего их позиционировать, чтобы при появлении ошибки, они сдвигались совместно с их блоком?
-      width: 18px;
-    }
-
-    &__email--icon {
-      height: 16px;
-      top: 21px;
-      width: 16px;
+      /* min-height: 58px; */
     }
 
     &__emotions {

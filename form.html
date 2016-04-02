@@ -12,15 +12,6 @@
   </head>
   <body>
     <svg xmlns="http://www.w3.org/2000/svg" style="display: none;">
-      <symbol id="icon-phone" viewBox="0 0 18 18">
-        <path  d="M3.6,7.8C5,10.6,7.4,12.9,10.2,14.4l2.2-2.2c0.3-0.3,0.699-0.4,1-0.2c1.1,0.4,2.3,0.6,3.6,0.6c0.6,0,1,0.4,1,1V17c0,0.6-0.4,1-1,1C7.6,18,0,10.4,0,1c0-0.6,0.4-1,1-1h3.5c0.6,0,1,0.4,1,1c0,1.2,0.2,2.4,0.6,3.6c0.1,0.3,0,0.7-0.2,1L3.6,7.8L3.6,7.8z"/>
-      </symbol>
-      <symbol id="icon-email" viewBox="0 0 16 16">
-        <path d="M8,10c-0.266,0-0.5-0.094-1-0.336L0,6v7c0,0.55,0.45,1,1,1h14c0.55,0,1-0.45,1-1V6L9,9.664C8.5,9.906,8.266,10,8,10z M15,2H1C0.45,2,0,2.45,0,3v0.758l8,4.205l8-4.205V3C16,2.45,15.55,2,15,2z"/>
-      </symbol>
-      <symbol id="icon-tick" viewBox="0 0 23.049 16.249">
-        <path d="M22.801,1.299L21.75,0.248c-0.331-0.331-0.872-0.331-1.203,0L8.693,12.102L2.502,5.911c-0.331-0.331-0.872-0.331-1.203,0L0.248,6.962c-0.331,0.331-0.331,0.872,0,1.202l7.837,7.837c0.167,0.167,0.388,0.248,0.608,0.246c0.22,0.002,0.44-0.079,0.608-0.246l13.5-13.5C23.132,2.171,23.132,1.63,22.801,1.299z"/>
-      </symbol>
       <symbol id="icon-twitter" viewBox="0 0 17.5 14.663">
         <path fill-rule="evenodd" clip-rule="evenodd" d="M11.283,0.153c1.736-0.484,3.074,0.264,3.685,1.15c0.694-0.225,1.372-0.47,2.072-0.69c-0.004,0.841-0.538,1.478-0.883,1.728C16.861,2.506,17.5,1.86,17.5,1.86c-0.175,0.977-1.035,1.746-1.611,1.977C15.65,10.429,12.617,14.793,5.507,14.66c-0.538,0,0.077,0-0.46,0c-0.422,0-4.29-0.45-5.047-1.843c2.341,0.192,4.011-0.412,4.835-1.15c-0.989-0.293-2.761-0.464-3.07-2.881c0.362,0.105,0.583,0.223,1.228,0.117C1.757,8.067,0.385,7.366,0.461,5.218c0.294,0.319,1.1,0.523,1.381,0.461c-0.725-0.235-2.03-3.281-0.921-4.836C2.794,2.655,4.769,4.364,8.29,4.528C8.506,2.288,9.461,0.788,11.283,0.153z"/>
       </symbol>
@@ -100,13 +91,11 @@
             <b class="feedback__header">Контактная информация:</b>
             <div class="feedback__phone">
               <label class="feedback__caption feedback__caption--contacts feedback__caption--phone" for="phone-field"><span class="feedback__caption--contact-phone">Контактный </span>телефон:</label>
-              <svg class="feedback__phone feedback__phone--icon"><use xlink:href="#icon-phone"/></svg>
               <input class="feedback__field feedback__field--contacts" type="tel" name="name" id="phone-field" placeholder="Введите телефон" required>
-              <label class="feedback__caption feedback__caption--error feedback__caption--show" for="phone-field">Ошибка, перепроверьте номер</label>
+              <label class="feedback__caption feedback__caption--error" for="phone-field">Ошибка, перепроверьте номер</label>
             </div>
             <div class="feedback__email">
               <label class="feedback__caption feedback__caption--contacts feedback__caption--email" for="email-field">Электронная почта:</label>
-              <svg class="feedback__email feedback__email--icon"><use xlink:href="#icon-email"/></svg>
               <input class="feedback__field feedback__field--contacts" type="email" name="name" id="email-field" placeholder="Введите e-mail" required>
               <label class="feedback__caption feedback__caption--error" for="email-field">Ошибка, перепроверьте e-mail</label>
             </div>

@@ -1,5 +1,6 @@
 var btnToggleMenu = document.querySelector('.header__menu-toggle');
 var navMenu = document.querySelector('.menu');
+var frmFeedback = document.querySelector('.feedback');
 var btnSubmit = document.querySelector('.btn--submit');
 var frmSomethingWrong = document.querySelector('.modal-form--something-wrong');
 var btnSomethingWrong = document.querySelector('.btn--something-wrong');
@@ -12,52 +13,48 @@ var lblEmailError = document.querySelector('.feedback__email .feedback__caption-
 var map = document.querySelector('.hotel-search__map');
 
 btnToggleMenu.addEventListener("click", toggleMenu);
-
 // TODO: Как-то это по-другому должно решаться, как?
-if (btnSubmit) btnSubmit.addEventListener("click", showHideModalFroms);
-if (btnSomethingWrong) btnSomethingWrong.addEventListener('click', showHideModalFroms);
-if (btnFeedbackSent) btnFeedbackSent.addEventListener('click', showHideModalFroms);
+if (btnSubmit) btnSubmit.addEventListener("click", showModalForm);
+if (btnSomethingWrong) btnSomethingWrong.addEventListener('click', hideModalForm);
+if (btnFeedbackSent) btnFeedbackSent.addEventListener('click', hideModalForm);
 
 function toggleMenu() {
-
   navMenu.classList.toggle('menu--closed');
-
   btnToggleMenu.classList.toggle('header__menu-toggle--closed');
-
 }
 
-function showHideModalFroms(event) {
+function showModalForm(event) {
+  event.preventDefault();
 
-  if ( validateForm() ) {
-
-    event.preventDefault();
-
-    frmFeedbackSent.classList.toggle('modal-form--show');
-
+  if ( !validateForm() ) {
+    frmSomethingWrong.classList.add('modal-form--show');
     return;
   }
 
-  frmSomethingWrong.classList.toggle('modal-form--show');
-
-  // TODO: Очистка формы
+  frmFeedbackSent.classList.add('modal-form--show');
+  frmFeedback.reset();
 
 }
 
-// TODO: Допилить, чтобы ошибка оставалась до того момента, пока не будет исправлена
+function hideModalForm() {
+  frmFeedbackSent.classList.remove('modal-form--show');
+  frmSomethingWrong.classList.remove('modal-form--show');
+}
+
 function validateForm() {
 
   if ( !fldPhone.checkValidity() ) {
-
-    //lblPhoneError.classList.toggle('feedback__caption--show');
-
+    lblPhoneError.classList.add('feedback__caption--show');
     return false;
+  } else {
+    lblPhoneError.classList.remove('feedback__caption--show');
   }
 
   if ( !fldEmail.checkValidity() ) {
-
-    //lblEmailError.classList.toggle('feedback__caption--show');
-
+    lblEmailError.classList.add('feedback__caption--show');
     return false;
+  }  else {
+    lblEmailError.classList.remove('feedback__caption--show');
   }
 
   return true;
@@ -65,6 +62,7 @@ function validateForm() {
 
 function initMap() {
   var positionSedona = new google.maps.LatLng(34.86973, -111.76098);
+
   var mapOptions = {
     center: positionSedona,
     zoom: 7
