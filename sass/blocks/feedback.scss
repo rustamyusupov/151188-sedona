@@ -46,6 +46,7 @@
   &__name {
     align-items: center;
     display: flex;
+    justify-content: space-between;
     margin-bottom: 20px;
   }
 
@@ -138,7 +139,8 @@
     }
 
     &--introduce {
-      width: 100%;
+      flex-grow: 1;
+      overflow: hidden; // TODO: Правильное ли это решение?
     }
 
     &--introduce,

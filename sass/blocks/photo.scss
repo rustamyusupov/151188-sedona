@@ -59,6 +59,7 @@
 
   .photo {
     margin-bottom: 0px;
+    width: 50%;
 
     &::before {
       content: none;
@@ -79,8 +80,11 @@
       flex-wrap: wrap;
       height: 65px;
       margin: 0;
+      padding: 0;
       padding: 0 20px;
       padding-top: 15px;
+
+      //width: 324px;
     }
 
     &__likes {
@@ -110,6 +114,7 @@
 
   .photo {
     position: relative;
+    width: 33.3333%;
 
     &__picture {
       width: 400px;

@@ -1,6 +1,5 @@
 .feature-picture {
   background-color: #e0ecf8;
-  display: flex;
   overflow: hidden;
 
   &__image {
@@ -25,6 +24,7 @@
 @media #{$break-large} {
 
   .feature-picture {
+    display: flex;
     width: 800px;
 
     &__image {
