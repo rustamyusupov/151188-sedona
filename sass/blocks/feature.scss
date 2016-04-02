@@ -101,13 +101,13 @@
 @media #{$break-medium} {
 
   .feature {
-    padding-bottom: 23px;
-    padding-top: 43px;
+    padding-bottom: 20px;//23px;
+    padding-top: 46px;//43px;
     width: 256px;
 
     &__title {
       font-size: $font-size-large;
-      margin-bottom: 12px;
+      margin-bottom: 11px;//12px;
       padding: 0 50px;
     }
 
@@ -139,9 +139,12 @@
 
     &--icon {
       margin-bottom: 52px;
-      padding: 0 49px;
+      margin-right: 2px;
+      padding: 0;
+      padding: 0 46px;
       padding-top: 124px;
       text-align: center;
+      width: 162px;
     }
 
     &--icon-home &__icon {
@@ -153,7 +156,7 @@
 
     &--icon-food &__icon {
       height: 68px;
-      left: 91px;
+      left: 89px;
       top: 28px;
       width: 77px;
     }
@@ -164,7 +167,7 @@
 
     &--icon-souvenirs &__icon {
       height: 75px;
-      left: 100px;
+      left: 95px;
       top: 22px;
       width: 64px;
     }
@@ -203,6 +206,7 @@
     &--bg-grey {
       margin-bottom: 1px;
       padding: 45px 20px;
+      width: 360px;
     }
 
     &--bg-grey &__text {
@@ -211,7 +215,9 @@
 
     &--icon {
       margin-bottom: 40px;
+      margin-right: 3px;
       padding-top: 123px;
+      width: 305px;
     }
 
     &--icon-home &__icon,
@@ -219,17 +225,20 @@
       left: 162px;
     }
 
-    &--icon-souvenirs  &__icon {
+    &--icon-souvenirs &__icon {
       left: 168px;
     }
 
     &--icon &__title {
       margin-bottom: 22px;
-      padding: 0 30px;
     }
 
     &--icon &__text {
-      padding: 0 24px;
+      padding: 0 11px;
+    }
+
+    &--icon-souvenirs &__text {
+      padding: 0 54px;
     }
 
   }
