@@ -133,7 +133,7 @@
     line-height: $line-height-base;
     padding: 16px 22px;
 
-    &::-webkit-input-placeholder {
+    &::placeholder {
       color: $color-base;
     }
 
@@ -253,7 +253,7 @@
     resize: none;
     width: 237px;
 
-    &::-webkit-input-placeholder {
+    &::placeholder {
       color: $color-base;
     }
 
