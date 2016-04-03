@@ -13,10 +13,16 @@ var lblEmailError = document.querySelector('.feedback__email .feedback__caption-
 var map = document.querySelector('.hotel-search__map');
 
 btnToggleMenu.addEventListener("click", toggleMenu);
-// TODO: Как-то это по-другому должно решаться, как?
+// TODO: Как-то это по-другому должно решаться?
 if (btnSubmit) btnSubmit.addEventListener("click", showModalForm);
 if (btnSomethingWrong) btnSomethingWrong.addEventListener('click', hideModalForm);
 if (btnFeedbackSent) btnFeedbackSent.addEventListener('click', hideModalForm);
+
+(function() {
+
+  toggleMenu();
+
+})();
 
 function toggleMenu() {
   navMenu.classList.toggle('menu--closed');
