@@ -22,6 +22,7 @@ module.exports = function(grunt) {
           dest: "build"
         }]
       },
+
       watch: {
         files: [{
           expand: true,
@@ -84,6 +85,14 @@ module.exports = function(grunt) {
       }
     },
 
+    uglify: {
+      js: {
+        files: {
+          "build/js/app.min.js": ["build/js/app.js"]
+        }
+      }
+    },
+
     browserSync: {
       server: {
         bsFiles: {
@@ -129,7 +138,8 @@ module.exports = function(grunt) {
     "sass",
     "postcss",
     "csso",
-    "imagemin"
+    "imagemin",
+    "uglify"
   ]);
 
 };
