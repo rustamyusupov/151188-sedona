@@ -93,6 +93,21 @@ module.exports = function(grunt) {
       }
     },
 
+    processhtml: {
+      options: {
+        data: {
+          message: 'Hello world!'
+        }
+      },
+      dist: {
+        files: {
+          "build/index.html": ["build/index.html"],
+          "build/photo.html": ["build/photo.html"],
+          "build/form.html": ["build/form.html"]
+        }
+      }
+    },
+
     browserSync: {
       server: {
         bsFiles: {
@@ -139,7 +154,8 @@ module.exports = function(grunt) {
     "postcss",
     "csso",
     "imagemin",
-    "uglify"
+    "uglify",
+    "processhtml"
   ]);
 
 };
