@@ -210,15 +210,42 @@
       margin-left: 19px;
       margin-right: 11px;
       order: -1;
+
+      &:hover {
+        fill: $color-hover;
+      }
+
+      &:active {
+        fill: $color-active-controls;
+      }
+
     }
 
     &__control-subtitle {
       fill: $color-white;
+
+      &:hover {
+        fill: $color-hover;
+      }
+
+      &:active {
+        fill: $color-active-controls;
+      }
+
     }
 
     &__control-fullscreen {
       fill: $color-white;
       margin-right: 26px;
+
+      &:hover {
+        fill: $color-hover;
+      }
+
+      &:active {
+        fill: $color-active-controls;
+      }
+
     }
 
   }
