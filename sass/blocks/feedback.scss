@@ -141,6 +141,7 @@
     &--introduce {
       flex-grow: 1;
       overflow: hidden; // TODO: Правильное ли это решение? Не решило проблему в IE11!
+      width: 100%; // Вот так работает в трех браузерах, проверить в Safari!
     }
 
     &--introduce,
