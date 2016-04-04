@@ -140,7 +140,7 @@
 
     &--introduce {
       flex-grow: 1;
-      overflow: hidden; // TODO: Правильное ли это решение?
+      overflow: hidden; // TODO: Правильное ли это решение? Не решило проблему в IE11!
     }
 
     &--introduce,
