@@ -1,3 +1,5 @@
+'use strict';
+
 var btnToggleMenu = document.querySelector('.header__menu-toggle');
 var navMenu = document.querySelector('.menu');
 var frmFeedback = document.querySelector('.feedback');
@@ -12,8 +14,8 @@ var lblPhoneError = document.querySelector('.feedback__phone .feedback__caption-
 var lblEmailError = document.querySelector('.feedback__email .feedback__caption--error');
 var map = document.querySelector('.hotel-search__map');
 
-btnToggleMenu.addEventListener("click", toggleMenu);
-if (btnSubmit) btnSubmit.addEventListener("click", showModalForm);
+btnToggleMenu.addEventListener('click', toggleMenu);
+if (btnSubmit) btnSubmit.addEventListener('click', showModalForm);
 if (btnSomethingWrong) btnSomethingWrong.addEventListener('click', hideModalForm);
 if (btnFeedbackSent) btnFeedbackSent.addEventListener('click', hideModalForm);
 
