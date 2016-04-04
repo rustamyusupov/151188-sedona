@@ -134,6 +134,7 @@
     height: 26px;
     line-height: $line-height-base;
     padding: 16px 22px;
+    padding-right: 72px;
 
     &::placeholder {
       color: $color-base;
@@ -589,7 +590,7 @@
 
     &__field--contacts {
       order: 3;
-      width: 56.5%;
+      width: 46.2%;
     }
 
     &__field--impression:checked + &__caption--impression::after {
