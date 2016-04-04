@@ -101,13 +101,13 @@
 @media #{$break-medium} {
 
   .feature {
-    padding-bottom: 20px;//23px;
-    padding-top: 46px;//43px;
+    padding-bottom: 20px;
+    padding-top: 46px;
     width: 256px;
 
     &__title {
       font-size: $font-size-large;
-      margin-bottom: 11px;//12px;
+      margin-bottom: 11px;
       padding: 0 50px;
     }
 
