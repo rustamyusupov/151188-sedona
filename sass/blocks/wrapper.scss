@@ -1,4 +1,5 @@
 .wrapper {
+  background-color: $color-white;
   margin: 0 auto;
   width: 320px;
 
@@ -7,6 +8,7 @@
   }
 
   @media #{$break-large} {
+    box-shadow: 0 5px 15px 0 rgba(0, 1, 1, 0.20);
     width: 1200px;
   }
 
