@@ -185,6 +185,7 @@
 
   &__field--places:checked + &__caption--places::after {
     background-image: url("../img/icon-tick.svg");
+    background-repeat: no-repeat;
     content: "";
     display: block;
     height: 16px;
