@@ -9,11 +9,14 @@
     margin-left: 8px;
   }
 
+  &__link {
+    display: flex;
+    margin-left: 5px;
+  }
+
   &__image {
     @include size(42px);
-    cursor: pointer;
     fill: $color-base;
-    margin-left: 5px;
 
     &:hover {
       fill: $color-hover;
@@ -31,16 +34,15 @@
 
   .copyright {
     align-items: flex-start;
-    margin-top: 5px;
+    margin-top: 2px;
 
     &__title {
       margin-left: 15px;
-      margin-top: 4px;
+      margin-top: 7px;
     }
 
     &__image {
       padding: 0;
-      margin-left: 5px;
     }
 
   }

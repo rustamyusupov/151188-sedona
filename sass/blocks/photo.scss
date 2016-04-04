@@ -29,13 +29,14 @@
   }
 
   &__likes {
+    color: $color-base;
     font-weight: bold;
     padding-left: 36px;
     position: relative;
+    text-decoration: none;
   }
 
   &__icon {
-    cursor: pointer;
     fill: #b2b2b2;
     height: 22px;
     left: -2px;
@@ -84,8 +85,6 @@
       padding: 0;
       padding: 0 20px;
       padding-top: 15px;
-
-      //width: 324px;
     }
 
     &__likes {
@@ -143,6 +142,7 @@
     }
 
     &__likes {
+      color: $color-white;
       padding-right: 20px;
     }
 
