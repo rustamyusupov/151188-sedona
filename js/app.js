@@ -71,6 +71,7 @@ function initMap() {
 
   var mapOptions = {
     center: positionSedona,
+    scrollwheel: false,
     zoom: 7
   }
 
