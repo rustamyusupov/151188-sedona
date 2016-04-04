@@ -14,7 +14,7 @@
   &__picture {
     @include size(280px);
     background-color: #fec882;
-    margin-bottom: 14px;
+    margin-bottom: 15px;
   }
 
   &__description {
@@ -23,13 +23,9 @@
     line-height: $line-height-medium;
   }
 
-  &__title {
-    margin-bottom: 1px;
-  }
-
   &__author {
     text-transform: none;
-    margin-bottom: 9px;
+    margin-bottom: 8px;
   }
 
   &__likes {
@@ -39,11 +35,12 @@
   }
 
   &__icon {
+    cursor: pointer;
     fill: #b2b2b2;
     height: 22px;
-    left: 0;
+    left: -2px;
     position: absolute;
-    top: -3px;
+    top: -2px;
     width: 24px;
   }
 
@@ -62,7 +59,8 @@
 @media #{$break-medium} {
 
   .photo {
-    margin-bottom: 0;
+    margin-bottom: 0px;
+    width: 50%;
 
     &::before {
       content: none;
@@ -81,10 +79,13 @@
     &__description {
       background-color: $bg-color-lightgrey;
       flex-wrap: wrap;
-      height: 64px;
+      height: 65px;
       margin: 0;
+      padding: 0;
       padding: 0 20px;
-      padding-top: 16px;
+      padding-top: 15px;
+
+      //width: 324px;
     }
 
     &__likes {
@@ -94,8 +95,8 @@
     }
 
     &__icon {
-      left: 2px;
-      top: 11px;
+      left: 4px;
+      top: 12px;
     }
 
     &:first-child {
@@ -114,6 +115,7 @@
 
   .photo {
     position: relative;
+    width: 33.3333%;
 
     &__picture {
       width: 400px;

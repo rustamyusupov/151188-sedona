@@ -2,7 +2,6 @@
   display: flex;
   flex-direction: column;
   margin-bottom: 73px;
-  margin-top: 39px;
 
   &__item {
     position: relative;
@@ -17,7 +16,7 @@
     }
 
     &--introduce {
-      margin-bottom: 23px;
+      margin-bottom: 24px;
       order: -2;
     }
 
@@ -47,7 +46,8 @@
   &__name {
     align-items: center;
     display: flex;
-    margin-bottom: 21px;
+    justify-content: space-between;
+    margin-bottom: 20px;
   }
 
   &__caption {
@@ -74,6 +74,14 @@
         width: 56px;
       }
 
+      &:hover::before {
+        background-color: $color-hover-input;
+      }
+
+      &:active::before {
+        background-color: $color-active-input;
+      }
+
     }
 
     &--impression::before {
@@ -85,7 +93,7 @@
     }
 
     &--contacts {
-      margin-bottom: 7px;
+      margin-bottom: 6px;
       margin-left: 22px;
       position: relative;
 
@@ -94,10 +102,10 @@
         background-position: center;
         background-repeat: no-repeat;
         content: "";
-        height: 57px;
+        height: 58px;
         position: absolute;
         right: 0;
-        top: 33px;
+        top: 32px;
         width: 58px;
       }
 
@@ -122,15 +130,32 @@
     border: none;
     font-size: $font-size-medium;
     font-weight: bold;
+    height: 26px;
     line-height: $line-height-base;
     padding: 16px 22px;
 
-    &::-webkit-input-placeholder {
+    &::placeholder {
       color: $color-base;
     }
 
     &--introduce {
+      box-sizing: border-box;
+      height: 58px;
       width: 100%;
+    }
+
+    &--introduce,
+    &--contacts {
+
+      &:hover {
+        background-color: $color-hover-input;
+      }
+
+      &:focus {
+        background-color: $color-white;
+        outline: 4px solid $color-border;
+      }
+
     }
 
     &--impression,
@@ -140,24 +165,32 @@
 
   }
 
+  &__field-wrapper {
+    width: 100%;
+  }
+
   &__field + &__caption {
     cursor: pointer;
   }
 
   &__field--impression:checked + &__caption--impression::after {
-      background-color: #333333;
-      border-radius: 50%;
-      content: "";
-      height: 22px;
-      left: 17px;
-      position: absolute;
-      top: 3px;
-      width: 22px;
+    background-color: #333333;
+    border-radius: 50%;
+    content: "";
+    height: 22px;
+    left: 17px;
+    position: absolute;
+    top: 3px;
+    width: 22px;
   }
 
-  // TODO: Как здесь инлайновый svg использовать?
+  &__field--impression:checked + &__caption--impression:active::after {
+    background-color: #a4a4a4;
+  }
+
   &__field--places:checked + &__caption--places::after {
     background-image: url("../img/icon-tick.svg");
+    background-repeat: no-repeat;
     content: "";
     display: block;
     height: 16px;
@@ -165,6 +198,10 @@
     position: absolute;
     top: 6px;
     width: 24px;
+  }
+
+  &__field--places:checked + &__caption--places:active::after {
+    background-image: url("../img/icon-tick-active.svg");
   }
 
   &__list {
@@ -177,12 +214,12 @@
     position: relative;
 
     &--impression {
-      margin-bottom: 43px;
-      margin-top: 38px;
+      margin-bottom: 42px;
+      margin-top: 37px;
     }
 
     &--places {
-      margin-bottom: 54px;
+      margin-bottom: 53px;
       margin-top: 31px;
     }
 
@@ -196,21 +233,12 @@
     position: relative;
   }
 
-  &__phone--icon {
-    height: 18px;
-    position: absolute;
-    right: 19px;
-    top: 53px;
-    width: 18px;
+  &__phone &__caption::after {
+    background-image: url("../img/icon-phone.svg");
   }
 
-  &__email--icon {
-    height: 18px;
-    position: absolute;
-    right: 20px;
-    top: 54px;
-    width: 18px;
-    z-index: 2;
+  &__email &__caption::after {
+    background-image: url("../img/icon-mail.svg");
   }
 
   &__emotions {
@@ -224,7 +252,7 @@
     resize: none;
     width: 237px;
 
-    &::-webkit-input-placeholder {
+    &::placeholder {
       color: $color-base;
     }
 
@@ -267,7 +295,7 @@
 
       &--introduce,
       &--impression {
-        margin-bottom: 32px;
+        margin-bottom: 34px;
 
         &::before {
           content: none;
@@ -303,12 +331,12 @@
       }
 
       &--contacts {
-        margin-bottom: 25px;
+        margin-bottom: 30px;
         text-align: center;
       }
 
       &--places {
-        margin-bottom: 51px;
+        margin-bottom: 53px;
         text-align: center;
 
         &::before {
@@ -318,36 +346,39 @@
       }
 
       &--emotions {
-        margin-bottom: 52px;
+        margin-bottom: 50px;
         text-align: center;
       }
 
       &--introduce .feedback__header {
-        margin-bottom: 59px;
+        margin-bottom: 57px;
         text-align: left;
       }
 
       &--impression .feedback__header {
-        margin-bottom: 75px;
+        margin-bottom: 73px;
         text-align: left;
       }
 
       &--contacts .feedback__header {
         display: inline-block;
-        margin-bottom: 26px;
+        margin-bottom: 24px;
         padding: 0 62px;
+        vertical-align: middle;
       }
 
       &--places .feedback__header {
         display: inline-block;
-        margin-bottom: 28px;
+        margin-bottom: 25px;
+        vertical-align: middle;
         width: 401px;
       }
 
       &--emotions .feedback__header {
         display: inline-block;
-        margin-bottom: 59px;
+        margin-bottom: 57px;
         padding: 0 76px;
+        vertical-align: middle;
       }
 
     }
@@ -365,7 +396,6 @@
       &--contacts {
         margin-bottom: 7px;
         margin-left: 0;
-        order: 1;
         padding-left: 21px;
 
         &::after {
@@ -395,11 +425,11 @@
     &__list-item {
 
       &--impression {
-        margin-bottom: 52px;
+        margin-bottom: 51px;
       }
 
       &--places {
-        margin-bottom: 31px;
+        margin-bottom: 30px;
         margin-left: 13px;
         width: 40%;
 
@@ -424,11 +454,13 @@
       flex-direction: row;
       flex-wrap: wrap;
       justify-content: space-between;
-      margin-bottom: 26px;
+      margin-bottom: 23px;
     }
 
     &__email--icon {
-      top: 52px;
+      height: 16px;
+      top: 54px;
+      width: 16px;
     }
 
     &__field--contacts {
@@ -468,7 +500,7 @@
 
       &--introduce,
       &--impression {
-        margin-bottom: 30px;
+        margin-bottom: 32px;
       }
 
       &--introduce {
@@ -480,7 +512,8 @@
         align-items: flex-end;
         display: flex;
         flex-wrap: wrap;
-        margin-bottom: 27px;
+        justify-content: center;
+        margin-bottom: 30px;
       }
 
       &--places {
@@ -488,7 +521,7 @@
       }
 
       &--emotions {
-        margin-bottom: 51px;
+        margin-bottom: 50px;
       }
 
       &--impression .feedback__header {
@@ -496,8 +529,9 @@
       }
 
       &--contacts .feedback__header {
-        margin-bottom: 42px;
-        width: 100%;
+        margin: 0 50px;
+        margin-bottom: 41px;
+        width: 29%;
       }
 
     }
@@ -520,8 +554,8 @@
         order: 2;
 
         &::after {
-          left: 341px;
-          top: -16px;
+          left: 342px;
+          top: -17px;
         }
 
       }
@@ -536,6 +570,10 @@
         padding-bottom: 7px;
         text-align: left;
         width: 100%;
+      }
+
+      .feedback__email &--error {
+        margin-left: 183px;
       }
 
       &--contact-phone {
@@ -558,7 +596,7 @@
     }
 
     &__list--places {
-      flex-wrap: nowrap;
+      flex-wrap: wrap;
       justify-content: space-between;
       margin: 0;
     }
@@ -566,7 +604,7 @@
     &__list-item--places {
       margin-bottom: 51px;
       margin-left: 0;
-      width: unset;
+      width: auto;
 
       &:nth-child(4) {
         margin-right: 2px;
@@ -581,16 +619,6 @@
       flex-wrap: wrap;
       justify-content: flex-start;
       width: 50%;
-    }
-
-    &__phone--icon {
-      right: -11px;
-      top: 53px;
-    }
-
-    &__email--icon {
-      right: -91px;
-      top: 20px;
     }
 
     &__emotions {

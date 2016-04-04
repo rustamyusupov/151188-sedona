@@ -11,8 +11,18 @@
 
   &__image {
     @include size(42px);
+    cursor: pointer;
     fill: $color-base;
     margin-left: 5px;
+
+    &:hover {
+      fill: $color-hover;
+    }
+
+    &:active {
+      fill: $color-active-copyright;
+    }
+
   }
 
 }

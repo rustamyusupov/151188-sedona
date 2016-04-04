@@ -29,4 +29,17 @@
     margin-top: 17px;
   }
 
+  &:hover {
+    background-color: $bg-color-hover;
+  }
+
+  &:active {
+    background-color: $bg-color-active;
+    fill: $color-active-social;
+  }
+
+  &:active &__icon {
+    fill: $color-active-social;
+  }
+
 }

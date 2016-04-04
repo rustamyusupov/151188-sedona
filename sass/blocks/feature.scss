@@ -1,7 +1,7 @@
 .feature {
   color: $color-white;
   padding-top: 40px;
-  padding-bottom: 26px;
+  padding-bottom: 25px;
 
   &__title {
     display: block;
@@ -24,7 +24,7 @@
     background-color: $bg-color-grey;
     color: $color-base;
     padding: 0 20px;
-    padding-bottom: 14px;
+    padding-bottom: 13px;
     padding-top: 27px;
     position: relative;
 
@@ -101,13 +101,13 @@
 @media #{$break-medium} {
 
   .feature {
-    padding-bottom: 23px;
-    padding-top: 43px;
+    padding-bottom: 20px;//23px;
+    padding-top: 46px;//43px;
     width: 256px;
 
     &__title {
       font-size: $font-size-large;
-      margin-bottom: 12px;
+      margin-bottom: 11px;//12px;
       padding: 0 50px;
     }
 
@@ -119,7 +119,7 @@
     &--bg-grey {
       padding: 0;
       padding-bottom: 23px;
-      padding-top: 43px;
+      padding-top: 45px;
 
       &::after {
         content: none;
@@ -128,19 +128,23 @@
     }
 
     &--bg-grey &__title {
-      margin-bottom: 13px;
+      margin-bottom: 11px;
     }
 
     &--bg-grey &__text {
+      margin-bottom: 20px;
       padding: 0 54px;
       word-wrap: break-word;
     }
 
     &--icon {
       margin-bottom: 52px;
-      padding: 0 49px;
-      padding-top: 121px;
+      margin-right: 2px;
+      padding: 0;
+      padding: 0 46px;
+      padding-top: 124px;
       text-align: center;
+      width: 162px;
     }
 
     &--icon-home &__icon {
@@ -152,7 +156,7 @@
 
     &--icon-food &__icon {
       height: 68px;
-      left: 91px;
+      left: 89px;
       top: 28px;
       width: 77px;
     }
@@ -163,13 +167,13 @@
 
     &--icon-souvenirs &__icon {
       height: 75px;
-      left: 100px;
+      left: 95px;
       top: 22px;
       width: 64px;
     }
 
     &--icon &__title {
-      margin-bottom: 23px;
+      margin-bottom: 21px;
       padding: 0 30px;
     }
 
@@ -201,7 +205,8 @@
 
     &--bg-grey {
       margin-bottom: 1px;
-      padding: 43px 20px;
+      padding: 45px 20px;
+      width: 360px;
     }
 
     &--bg-grey &__text {
@@ -210,7 +215,9 @@
 
     &--icon {
       margin-bottom: 40px;
-      padding-top: 122px;
+      margin-right: 3px;
+      padding-top: 123px;
+      width: 305px;
     }
 
     &--icon-home &__icon,
@@ -218,17 +225,20 @@
       left: 162px;
     }
 
-    &--icon-souvenirs  &__icon {
+    &--icon-souvenirs &__icon {
       left: 168px;
     }
 
     &--icon &__title {
       margin-bottom: 22px;
-      padding: 0 30px;
     }
 
     &--icon &__text {
-      padding: 0 24px;
+      padding: 0 11px;
+    }
+
+    &--icon-souvenirs &__text {
+      padding: 0 54px;
     }
 
   }

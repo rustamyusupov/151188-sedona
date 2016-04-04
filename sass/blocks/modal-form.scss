@@ -6,13 +6,16 @@
   padding-bottom: 21px;
   position: absolute;
   width: 320px;
-
-  // TODO: Временно
-  top: 2000px;
+  z-index: 10;
 
   &--something-wrong {
     background-color: $color-white;
     padding-bottom: 36px;
+    top: 1220px;
+  }
+
+  &--feedback-sent {
+    top: 2020px;
   }
 
   &__header {
@@ -57,15 +60,14 @@
     padding-bottom: 44px;
     transform: translateX(-50%);
 
-    // TODO: Временно
-    top: 1170px;
-
     &--something-wrong {
       padding-bottom: 49px;
+      top: 1250px;
       width: 400px;
     }
 
     &--feedback-sent {
+      top: 1630px;
       width: 640px;
     }
 
@@ -93,6 +95,22 @@
         padding-bottom: 0px;
       }
 
+    }
+
+  }
+
+}
+
+@media #{$break-large} {
+
+  .modal-form {
+
+    &--something-wrong {
+      top: 1170px;
+    }
+
+    &--feedback-sent {
+      top: 1470px;
     }
 
   }

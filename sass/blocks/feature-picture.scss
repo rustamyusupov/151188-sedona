@@ -1,9 +1,10 @@
 .feature-picture {
   background-color: #e0ecf8;
-  display: flex;
-  justify-content: center;
   overflow: hidden;
-  width: 320px;
+
+  &__image {
+    transform: translateX(-103px);
+  }
 
 }
 
@@ -12,6 +13,10 @@
   .feature-picture {
     @include size(512px, 256px);
 
+    &__image {
+      transform: translateX(-6px);
+    }
+
   }
 
 }
@@ -19,11 +24,13 @@
 @media #{$break-large} {
 
   .feature-picture {
+    display: flex;
     width: 800px;
 
     &__image {
-      @include size(unset, unset);
+      @include size(auto, auto);
       align-self: center;
+      transform: translateX(0);
     }
 
   }
