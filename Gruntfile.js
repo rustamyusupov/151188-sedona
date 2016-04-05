@@ -1,12 +1,12 @@
-"use strict";
+'use strict';
 
 module.exports = function(grunt) {
-  require("load-grunt-tasks")(grunt);
+  require('load-grunt-tasks')(grunt);
 
   grunt.initConfig({
 
     clean: {
-      build: ["build"]
+      build: ['build']
     },
 
     copy: {
@@ -14,12 +14,12 @@ module.exports = function(grunt) {
         files: [{
           expand: true,
           src: [
-            "fonts/**/*.{woff,woff2}",
-            "img/**",
-            "js/**",
-            "*.html"
+            'fonts/**/*.{woff,woff2}',
+            'img/**',
+            'js/**',
+            '*.html'
           ],
-          dest: "build"
+          dest: 'build'
         }]
       },
 
@@ -27,12 +27,12 @@ module.exports = function(grunt) {
         files: [{
           expand: true,
           src: [
-            "fonts/**/*.{woff,woff2}",
-            "img/**/*.{png,jpg,gif,svg}",
-            "js/**/*.js",
-            "*.html"
+            'fonts/**/*.{woff,woff2}',
+            'img/**/*.{png,jpg,gif,svg}',
+            'js/**/*.js',
+            '*.html'
           ],
-          dest: "build"
+          dest: 'build'
         }]
       }
     },
@@ -40,7 +40,7 @@ module.exports = function(grunt) {
     sass: {
       style: {
         files: {
-          "build/css/style.css": "sass/style.scss"
+          'build/css/style.css': 'sass/style.scss'
         }
       }
     },
@@ -48,27 +48,27 @@ module.exports = function(grunt) {
     postcss: {
       options: {
         processors: [
-          require("autoprefixer")({browsers: [
-            "last 3 versions",
-            "last 3 Chrome versions",
-            "last 3 Firefox versions",
-            "last 3 Opera versions",
-            "last 3 Edge versions"
+          require('autoprefixer')({browsers: [
+            'last 3 versions',
+            'last 3 Chrome versions',
+            'last 3 Firefox versions',
+            'last 3 Opera versions',
+            'last 3 Edge versions'
           ]})
         ]
       },
       style: {
-        src: "build/css/*.css"
+        src: 'build/css/*.css'
       }
     },
 
     csso: {
       style: {
         options: {
-          report: "gzip"
+          report: 'gzip'
         },
         files: {
-          "build/css/style.min.css": ["build/css/style.css"]
+          'build/css/style.min.css': ['build/css/style.css']
         }
       }
     },
@@ -80,7 +80,7 @@ module.exports = function(grunt) {
         },
         files: [{
           expand: true,
-          src: ["build/img/**/*.{png,jpg,gif,svg}"]
+          src: ['build/img/**/*.{png,jpg,gif,svg}']
         }]
       }
     },
@@ -88,7 +88,7 @@ module.exports = function(grunt) {
     uglify: {
       js: {
         files: {
-          "build/js/app.min.js": ["build/js/app.js"]
+          'build/js/app.min.js': ['build/js/app.js']
         }
       }
     },
@@ -101,9 +101,9 @@ module.exports = function(grunt) {
       },
       dist: {
         files: {
-          "build/index.html": ["build/index.html"],
-          "build/photo.html": ["build/photo.html"],
-          "build/form.html": ["build/form.html"]
+          'build/index.html': ['build/index.html'],
+          'build/photo.html': ['build/photo.html'],
+          'build/form.html': ['build/form.html']
         }
       }
     },
@@ -112,12 +112,12 @@ module.exports = function(grunt) {
       server: {
         bsFiles: {
           src: [
-            "build/*.html",
-            "build/css/*.css"
+            'build/*.html',
+            'build/css/*.css'
           ]
         },
         options: {
-          server: "build/.",
+          server: 'build/.',
           watchTask: true,
           notify: false,
           open: true,
@@ -129,33 +129,33 @@ module.exports = function(grunt) {
     watch: {
       files: {
         files: [
-          "fonts/**/*.{woff,woff2}",
-          "img/**/*.{png,jpg,gif,svg}",
-          "js/**/*.js",
-          "*.html"
+          'fonts/**/*.{woff,woff2}',
+          'img/**/*.{png,jpg,gif,svg}',
+          'js/**/*.js',
+          '*.html'
         ],
-        tasks: ["copy:watch"],
+        tasks: ['copy:watch'],
         options: {spawn: false}
       },
       style: {
-        files: ["sass/**/*.{scss,sass}"],
-        tasks: ["sass", "postcss", "csso"],
+        files: ['sass/**/*.{scss,sass}'],
+        tasks: ['sass', 'postcss', 'csso'],
         options: {spawn: false}
       }
     }
 
   });
 
-  grunt.registerTask("serve", ["browserSync", "watch"]);
-  grunt.registerTask("build", [
-    "clean",
-    "copy",
-    "sass",
-    "postcss",
-    "csso",
-    "imagemin",
-    "uglify",
-    "processhtml"
+  grunt.registerTask('serve', ['browserSync', 'watch']);
+  grunt.registerTask('build', [
+    'clean',
+    'copy',
+    'sass',
+    'postcss',
+    'csso',
+    'imagemin',
+    'uglify',
+    'processhtml'
   ]);
 
 };

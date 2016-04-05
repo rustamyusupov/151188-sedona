@@ -5,4 +5,9 @@ body {
   font-weight: normal;
   line-height: $line-height-base;
   text-transform: uppercase;
+
+  @media #{$break-large} {
+    background-color: $bg-color-lightgrey;
+  }
+
 }

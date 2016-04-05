@@ -29,13 +29,14 @@
   }
 
   &__likes {
+    color: $color-base;
     font-weight: bold;
     padding-left: 36px;
     position: relative;
+    text-decoration: none;
   }
 
   &__icon {
-    cursor: pointer;
     fill: #b2b2b2;
     height: 22px;
     left: -2px;
@@ -77,26 +78,42 @@
     }
 
     &__description {
+      align-content: center;
       background-color: $bg-color-lightgrey;
+      flex-direction: row;
       flex-wrap: wrap;
-      height: 65px;
+      justify-content: flex-start;
+      min-height: 72px;
       margin: 0;
       padding: 0;
-      padding: 0 20px;
-      padding-top: 15px;
+      padding-left: 20px;
+      padding-top: 8px;
+      position: relative;
+    }
 
-      //width: 324px;
+    &__title {
+      width: 70%;
+    }
+
+    &__author {
+      width: 70%;
     }
 
     &__likes {
-      align-self: flex-end;
-      padding-top: 13px;
+      position: absolute;
+      right: 20px;
+      top: 28px;
       width: 33px;
+
+      &--wide {
+        right: 21px;
+      }
+
     }
 
     &__icon {
-      left: 4px;
-      top: 12px;
+      left:4px;
+      top: 0px;
     }
 
     &:first-child {
@@ -132,7 +149,7 @@
       color: $color-white;
       left: 0;
       padding: 0;
-      padding-top: 16px;
+      padding-top: 8px;
       position: absolute;
       width: 100%;
     }
@@ -143,7 +160,8 @@
     }
 
     &__likes {
-      padding-right: 20px;
+      color: $color-white;
+      top: 28px;
     }
 
     &__icon {
