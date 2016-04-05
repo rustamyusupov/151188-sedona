@@ -1,6 +1,7 @@
 .wrapper {
   background-color: $color-white;
   margin: 0 auto;
+  overflow: hidden;
   width: 320px;
 
   @media #{$break-medium} {
